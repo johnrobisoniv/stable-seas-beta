@@ -1,0 +1,365 @@
+id,date,contact,noSkiffs,pob,activityType,success,shipName,noSeafarers,shipType,flagState,crewSize,waterClass,movementType,locationType,locationDescription,lat,lon,theft,armsType,theftType,theftEstimate,injuryDescription,addlInfo,extraNote,notCounted
+1,1/14/2016,Direct,1,4,Robbery;Successful Boarding,FALSE,Arc en Ciel,2,Yacht,France,1,Anchorage,Anchored,Territorial,southwest coast of St. Croix,,,TRUE,Guns;Knives,Minor Robbery,Cash and electronics,Slashed leg and gunshot wound to thigh that shattered femur and required emergency surgery,"https://www.safetyandsecuritynet.com/recent_incidents/, http://vifreepress.com/2016/02/piracy-in-st-croix-french-national-says-he-was-beaten-stabbed-shot-and-robbed-at-sea-off-the-coast-of-frederiksted/","They stole cash and electronics from below. The captain was then shot in the right thigh at close range, severely wounding him, and left on the floor of his drifting boat when the men departed.",
+2,1/13/2016,Direct,1,4,Robbery;Successful Boarding,FALSE,Unknown,2,Yacht,,,Open water,Steaming,Territorial,"Middle Long Cay, Brazil",,,FALSE,Guns,Minor Robbery,"Cash, camera, computers, food, drinks, jewelry, outboard motor",,"http://www.sanpedrosun.com/crime-and-violence/2016/01/24/assault-and-robbery-at-sea/, https://www.safetyandsecuritynet.com/3636-2/,",Four men in 20-30 age range came aboard each armed with a pistol.,
+10,1/27/2016,Direct,1,6,Failed Boarding,FALSE,Unknown,1,Yacht,,,Anchorage,Anchored,Territorial,off the coast of Nicaragua north of Isla Providencia (Colombia),14.50361156,-81.9283371,FALSE,,,,,https://www.safetyandsecuritynet.com/the-greater-antilles-cuba-haiti-jamaica-the-dominican-republic-and-puerto-rico/,a 60-foot steel fishing boat with at least 6 POB (boat description - white and blue; in very good condition; name ? Mister Henson; fishing vessel with crab fence - attempted to ram and board the yacht,
+14,5/1/2016,Direct,1,3,Robbery;Successful Boarding,FALSE,Unknown,,Passenger,,,Open water,Steaming,Riverine,"Solimoes River in the State of Amazonas, Brazil",,,TRUE,Guns,Minor Robbery,"$2,600, several mobile phones and they stripped equipment from a vehicle being transported",,"http://www.cruiselawnews.com/2016/07/articles/fires-1/fire-bandits-plague-amazon-river-cruises-in-peru/, http://www.insightcrime.org/news-briefs/peru-river-pirates-in-the-amazon-river","In may unknown date the attackers wore masks and carried assault rifles and pistols. They stole $2,600, several mobile phones and they stripped equipment from a vehicle being transported by the ferry.",
+17,5/1/2016,Direct,,10,Robbery;Successful Boarding,FALSE,Unknown,,Passenger,,,Open water,Steaming,Riverine,"city of Barcarena, near Brazil's northern Atlantic coast",,,TRUE,Armed (Unspecified),Minor Robbery,Unknown,,"http://www.insightcrime.org/news-briefs/pirates-terrorizing-brazilian-amazon-highlights-regional-security-concern,http://www.cruiselawnews.com/2016/07/articles/fires-1/fire-bandits-plague-amazon-river-cruises-in-peru/",In May date Unknown,
+18,3/4/2016,Direct,,2,Robbery;Successful Boarding,FALSE,Unknown,2,Yacht,,3+,Anchorage,Anchored,Territorial,Wallilabou Bay,,,TRUE,Guns,Minor Robbery,"cash, credit cards",shot dead,"http://vifreepress.com/2016/03/9368/, https://www.safetyandsecuritynet.com/3636-2/","One person (German national) onboard was killed, and another German national injured.",
+19,2/3/2016,Visual,2,7,Successful Boarding,FALSE,Nord Guardian,20,Product Tanker,Denmark,,Anchorage,Anchored,Territorial,"Callao Anchorage, Peru",12,-77.19999695,FALSE,,,,,,7 robbers armed with machetes in 2 speedboats came alongside the tanker. Two robbers boarded but were spotted by the alert crew resulting in the robbers escaping without stealing anything,
+42,5/12/2016,Visual,1,2,Robbery;Successful Boarding,FALSE,Unknown,,,,,Open water,Anchored,Riverine,"Rio Chagres, Panama",,,TRUE,,Minor Robbery,Personal Valuables and Cash,,https://www.safetyandsecuritynet.com/recent_incidents/,"three perps in 18 foot white aluminum skiff with black outboard, believed to be local fisherman. Notified soldiers on naval patrol boat at mouth of river",
+43,5/25/2016,Direct,,2,Robbery;Successful Boarding,FALSE,Unknown,2,yacht,UK,,,Anchored,Territorial,"Tobago Cays, St. Vincent and the Grenadines",12.63166714,-61.35638809,TRUE,Guns,Minor Robbery,"Cash (EC 500), cell phones","The Captain suffered several head and facial injuries, two fractured ribs and some bruising",https://www.safetyandsecuritynet.com/recent_incidents/,"boarded by two masked
+men, one with a gun, while anchored in Tobago Cays. The intruders demanded money and hit the Captain several
+times on the head with the yacht?s heavy flash light",
+44,5/28/2016,Direct,,5,Robbery;Successful Boarding,FALSE,Rosana 664,,FV,Guyana,7,,,,"Lower Shell Area, near Nickerie in
+northern Suriname",,,TRUE,,Minor Robbery,two 48 hp outboard motor engines,,https://www.safetyandsecuritynet.com/recent_incidents/,"Guyana police arrested five people allegedly involved in a pirate attack that left one
+man dead and three others missing at sea.",
+45,6/20/2016,Unseen,1,,Robbery;Successful Boarding,FALSE,Unknown,2,Yacht,,,Anchorage,Anchored,Territorial,"Isabel Segunda, Vieques, Puerto Rico",,,TRUE,,Minor Robbery,"small outboard motor (4hp yamaha 4 stroke), boat hook, and a small inverter",,https://www.safetyandsecuritynet.com/recent_incidents/,"robbers boarded an anchored sailing yacht in Isabel Segunda, Vieques after rowing out.",
+46,6/25/2016,Unseen,1,1,Successful Boarding,FALSE,Unknown,2,Yacht,,,Anchorage,Anchored,Territorial,"Santa Barbara de Samana, Dominican Republic",,,FALSE,,,,,https://www.safetyandsecuritynet.com/the-greater-antilles-cuba-haiti-jamaica-the-dominican-republic-and-puerto-rico/,"dinghy was on davits and locked to the yacht, but now had an empty canoe tied to its bow. Apparently the thief was looking for an outboard/dinghy to steal and he was interrupted, and jumped into the water and swam to shore.",
+47,6/25/2016,Direct,1,5,Suspicious Activity,FALSE,Unknown,,yacht,,3,Open water,Steaming,International,"2-5 miles east of the Hibiscus platform, Trinidad & Tobago",,,FALSE,,,,,"https://www.safetyandsecuritynet.com/3636-2/, http://www.noonsite.com/Countries/TrinidadTobago/trinidad-hibiscus-gas-platform-attempted-piracy","A pirogue with 5-6 Spanish speaking men made multiple rapid approaches to the yacht, and began yelling (about fuel), he yacht captain began multiple evasive maneuvers",
+48,7/14/2016,Direct,,8,Robbery;Successful Boarding,FALSE,Amazon Discovery,,Passenger,,30,Open water,Steaming,Riverine,Peru Riverine,-3.735555649,-73.1883316,TRUE,Guns,Large Scale Robbery,"$26,000 in personal equipment and cash",captain beat with pistol,http://www.cruiselawnews.com/2016/07/articles/fires-1/fire-bandits-plague-amazon-river-cruises-in-peru/,"eight robbers boarded the cruise ship AMAZON DISCOVERY, and robbed the
+passengers of approximately $26,000 in personal equipment and cash.",
+49,7/17/2016,Visual,,,Successful Boarding,FALSE,BW Egret,20,Tanker,,,Anchorage,Anchored,Territorial,Port Au Prince East Anchorage,18.56666756,-72.3833313,FALSE,,,,,,"Duty crewman on routine rounds noticed the robbers and raised the
+alarm. Seeing the crew?s alertness, the robbers jumped overboard and escaped empty-handed.",
+50,7/20/2016,Visual,1,2,Failed Boarding,FALSE,Danubia,20,Tanker,Liberia,,Anchorage,Anchored,Territorial,"Talara Roads, Peru",,,FALSE,,,,,,During routine rounds the crew noticed a small boat near the starboard anchor. One robber in boat and one lcimbing up anchor chain.  robbers escaped in boat,
+51,7/30/2016,Direct,,2,Hostage/Kidnapping;Successful Boarding,FALSE,Unknown,2,Yacht,,,Anchorage,Anchored,Territorial,Grenada,,,FALSE,,,,Two assaulted,http://www.msrisk.com/wp-content/uploads/2016/08/Maritime-Security-Review-1-7-August-2016.pdfhttps://www.safetyandsecuritynet.com/recent_incidents/,See excel sheet for all details (too long for access database),
+52,8/2/2016,Visual,1,3,Failed Boarding;Suspicious Activity,FALSE,Unknown,2,Yacht,,,Open water,Steaming,Territorial,"10nm NE of Boca Monos, Trinidad and Tobago",,,FALSE,,,,,http://www.msrisk.com/wp-content/uploads/2016/08/Maritime-Security-Review-1-7-August-2016.pdf,"The pirogue
+pulled up alongside and tried to get as close to the yacht as feasible. Two men were standing and one tried to hold
+on to the hull of the yacht but the sea state was too rough.",
+53,9/2/2016,Direct,1,2,Robbery;Successful Boarding,FALSE,Century Melody,22,Bulk Carrier,Panama,,Anchorage,Anchored,Territorial,"Port Au Prince, Haiti",18.56777763,-72.53500366,TRUE,Knives;Other,Minor Robbery,ship stores,,,Two robbers board anchored ship and threaten duty crew with long knife and stones. Alarm raised crew mustered. Robbers escape in small boat with stolen ship stores.,
+54,9/1/2016,Direct,,10,Robbery;Successful Boarding,FALSE,Unknown,,Passenger,,260,Open water,Steaming,Riverine,"Belem, Brazil",,,TRUE,,Minor Robbery,passenger goods,,"https://www.theguardian.com/world/2011/jun/17/brazil-amazon-pirates, http://www.nytimes.com/2016/11/19/world/americas/brazil-amazon-pirates-riverboats-rain-forest.html?_r=0","in September 2016 10 masked men stormed a passenger ship near the city of Bel?m, robbing 260 passengers at once. The attackers used one woman aboard as a human shield during the ordeal.",
+55,9/22/2016,Unseen,4,,Robbery;Successful Boarding,FALSE,Americas Spirit,18,Tanker,Panama,,Anchorage,Anchored,Territorial,"Barcelona Anchorage, Venezuela",10.14999962,-64.76667023,TRUE,,Minor Robbery,ship property,,,"Robbers disguised as fishermen approached and
+boarded the tanker, stole ship?s properties and escaped unnoticed.",
+56,10/1/2016,Direct,,4,Robbery;Successful Boarding,FALSE,Unknown,18,fuel ship,,,Open water,Steaming,Riverine,"Solimoes River, Brazil",,,TRUE,Guns,Bunkering,"2,600 gallons of diesel fuel, along with the cash, watches and clothing of the crew",,"http://www.nytimes.com/2016/11/19/world/americas/brazil-amazon-pirates-riverboats-rain-forest.html?_r=0, http://www.insightcrime.org/news-briefs/pirates-terrorizing-brazilian-amazon-highlights-regional-security-concern","(More like Minor robbery and in ) four masked pirates with rifles took over a fuel ship on the Solim?es River and stole more than 2,600 gallons of diesel fuel, along with the cash, watches and clothing of the crew",
+57,10/6/2016,Unseen,1,,Robbery;Successful Boarding,FALSE,Kumano Lily,17,General Cargo,Panama,,Anchorage,Anchored,Territorial,"Callao Anchorage, Peru",-12.01694489,-77.1838913,TRUE,,Minor Robbery,ship's properties,,,"Robbers in a wooden skiff approach and boarded an anchored
+general cargo ship. The theft was discovered by the duty AB during
+routine rounds.",
+58,10/10/2016,Direct,1,,Successful Boarding,FALSE,Unknown,2,yacht,,,Anchorage,Anchored,Territorial,"Chateaubelair, saint vincent & grenadines",,,FALSE,Knives,,,Unknown injury suffered while defending against attackers,NCAGS,"boarded by
+armed men with machetes who injured the captain as he forced the attackers back to their boat.",
+59,10/14/2016,Visual,1,4,Failed Boarding,FALSE,Betula Arrow,17,General Cargo,Panama,,Anchorage,Anchored,Territorial,"Outside Callao Anchorage, Peru",-12.00722218,-77.17333221,FALSE,,,,,,"Alert crew noticed the robbers,
+raised the alarm and activated the pressurized fire hoses
+resulting in the robbers aborting the attempted attack and moving
+away.",
+60,11/26/2016,Direct,at least 2,11,Robbery;Successful Boarding,FALSE,Global Explorer and Vikrant Dolphin,50,Offshore Supply Vessel,,,Anchorage,Anchored,Territorial,"Dos Bocas Anchorage, Tabasco State, Mexico",,,TRUE,Armed (Unspecified),Minor Robbery,"equipment, cargo and crews? belongings",,Maritime Herald,"Eleven armed men boarded
+the ships about 0200 local time and stole equipment, cargo and crews? belongings. Crews hid in the citadels until a
+security team arrived. Pirates fled in their boats",
+61,12/20/2016,Direct,13,60,Robbery;Successful Boarding,FALSE,Unknown,2,Yacht,,2,Open water,Steaming,Territorial,"Media Luna Cays, Nicaragua",,,TRUE,Knives,Minor Robbery,"all extra diesel stored in containers, mobile phones, money, clothes, food, fishing equipement, navigation aids, personal effects, various sailing equipment",,https://www.safetyandsecuritynet.com/date-2016-12-20-country-name-nicaragua-location-detail-media-luna-cays-event-piracy/,"The crew managed to keep sailing as they were boarded by 25-30 men, with another 30 in the pangas. The crew protested when they took gear necessary to their continued travel and in a few cases it was reluctantly returned by the leader.",
+0,2/11/2016,,2,,,TRUE,,0,,,,,,,,3.6,5.616666667,Minor Robbery,,,,,,,FALSE
+0,1/29/2016,,2,14,,TRUE,,0,,,,,,,,2.5,5.583333333,,,,,,,,FALSE
+0,1/30/2016,,3,,,FALSE,,0,,,,,,,,3.116666667,6.016666667,,,,,,,,FALSE
+0,2/23/2016,,,,,TRUE,,0,,,,,,,,3.716666667,5.316666667,Minor Robbery,,,,,,,FALSE
+0,3/5/2016,,1,10,,TRUE,,0,,,,,,,,4.083333333,6.683333333,,,,,,,,FALSE
+0,2/26/2016,,1,5,,TRUE,,0,,,,,,,,3.85,4.65,Minor Robbery,,,,,,,FALSE
+0,3/26/2016,,1,8,,TRUE,,0,,,,,,,,4.333333333,5.166666667,Minor Robbery,,,,,,,FALSE
+0,4/11/2016,,1,8,,TRUE,,0,,,,,,,,2.801111111,6.669166667,Minor Robbery,,,,,,,FALSE
+0,4/11/2016,,,,,TRUE,,0,,,,,,,,4.133888889,5.384722222,,,,,,,,FALSE
+0,4/19/2016,,,,,TRUE,,0,,,,,,,,3.5,4.833333333,Minor Robbery,,,,,,,FALSE
+0,4/20/2016,,,,,TRUE,,0,,,,,,,,3.65,6.133333333,,,,,,,,FALSE
+0,4/25/2016,,1,2,,TRUE,,0,,,,,,,,4.75,11.83333333,Minor Robbery,,,,,,,FALSE
+0,5/11/2016,,1,7,,TRUE,,0,,,,,,,,6.085277778,1.25,,,,,,,,FALSE
+0,6/13/2016,,1,1,,TRUE,,0,,,,,,,,8.735277778,13.28583333,Minor Robbery,,,,,,,FALSE
+0,3/11/2016,,1,8,,FALSE,,0,,,,,,,,2.866666667,4.866666667,,,,,,,,FALSE
+0,3/11/2016,,,,,FALSE,,0,,,,,,,,3.05,5.05,,,,,,,,FALSE
+0,2/5/2016,,1,7,,FALSE,,0,,,,,,,,4.151944444,6.9675,,,,,,,,FALSE
+0,2/5/2016,,1,,,TRUE,,0,,,,,,,,4.033333333,6.9,Minor Robbery,,,,,,,FALSE
+0,1/15/2016,,1,,,TRUE,,0,,,,,,,,4.583333333,6.533333333,,,,,,,,FALSE
+0,1/18/2016,,,,,TRUE,,0,,,,,,,,5,6.266666667,Minor Robbery,,,,,,,TRUE
+0,1/13/2016,,1,,,TRUE,,0,,,,,,,,4.916666667,5.5,,,,,,,,FALSE
+0,1/15/2016,,1,10,,TRUE,,0,,,,,,,,4.083333333,5.416666667,Minor Robbery,,,,,,,FALSE
+0,1/19/2016,,2,,,FALSE,,0,,,,,,,,3.866666667,5.55,,,,,,,,FALSE
+0,4/1/2016,,1,9,,FALSE,,0,,,,,,,,3.9,5.683333333,,,,,,,,FALSE
+0,4/7/2016,,1,7,,FALSE,,0,,,,,,,,3.301666667,5.385833333,,,,,,,,FALSE
+0,4/10/2016,,1,7,,FALSE,,0,,,,,,,,3.285555556,5.516666667,,,,,,,,FALSE
+0,4/18/2016,,1,,,FALSE,,0,,,,,,,,3.9,5.633333333,,,,,,,,FALSE
+0,4/19/2016,,1,7,,FALSE,,0,,,,,,,,3.883333333,5.366666667,,,,,,,,FALSE
+0,8/5/2016,,1,4,,TRUE,,0,,,,,,,,6.433333333,3.416666667,Bunkering,,,,,,,TRUE
+0,4/28/2016,,1,,,FALSE,,0,,,,,,,,3.933333333,4.716666667,,,,,,,,FALSE
+0,5/4/2016,,1,,,FALSE,,0,,,,,,,,3.900277778,5.285,,,,,,,,FALSE
+0,5/5/2016,,1,,,FALSE,,0,,,,,,,,3.835833333,5.4025,,,,,,,,FALSE
+0,5/5/2016,,1,,,FALSE,,0,,,,,,,,3.901111111,5.533333333,,,,,,,,FALSE
+0,5/7/2016,,2,7,,FALSE,,0,,,,,,,,3.7,5.166666667,,,,,,,,FALSE
+0,3/9/2016,,1,3,,TRUE,,0,,,,,,,,5.874444444,13.03833333,,,,,,,,TRUE
+0,8/7/2016,,1,2,,TRUE,,0,,,,,,,,4.735833333,11.7675,,,,,,,,FALSE
+0,8/13/2016,,1,2,,TRUE,,0,,,,,,,,6.433333333,3.370277778,,,,,,,,TRUE
+0,8/17/2016,,1,9,,TRUE,,0,,,,,,,,3.9,7.15,Minor Robbery,,,,,,,FALSE
+0,7/7/2016,,1,,,TRUE,,0,,,,,,,,3.266666667,5.15,,,,,,,,FALSE
+0,7/3/2016,,1,6,,TRUE,,0,,,,,,,,9.385,13.68555556,Minor Robbery,,,,,,,FALSE
+0,1/19/2016,,1,2,,TRUE,,0,,,,,,,,4.75,11.83333333,,,,,,,,FALSE
+0,2/11/2016,,2,14,,TRUE,,0,,,,,,,,4,4,Minor Robbery,,,,,,,FALSE
+0,1/12/2016,,1,5,,TRUE,,0,,,,,,,,,,,,,,,,,TRUE
+0,1/24/2016,,1,2,,TRUE,,0,,,,,,,,5.834722222,13.41916667,,,,,,,,FALSE
+0,3/1/2016,,2,12,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,,,TRUE
+0,2/14/2016,,3,,,FALSE,,0,,,,,,,,6.436666667,3.331666667,,,,,,,,TRUE
+0,5/13/2016,,,,,FALSE,,0,,,,,,,,3.95,7.05,,,,,,,,FALSE
+0,6/29/2016,,1,,,FALSE,,0,,,,,,,,5.083333333,6.266666667,,,,,,,,TRUE
+0,6/27/2016,,1,3,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,,,TRUE
+0,6/27/2016,,1,,,TRUE,,0,,,,,,,,,,,,,,,,,TRUE
+0,6/26/2016,,,,,TRUE,,0,,,,,,,,,,,,,,,,,TRUE
+0,6/25/2016,,1,,,TRUE,,0,,,,,,,,,,,,,,,,,FALSE
+0,4/20/2016,,,,,FALSE,,0,,,,,,,,4.116666667,6.85,,,,,,,,FALSE
+0,4/19/2016,,,,,TRUE,,0,,,,,,,,3.65,6.133333333,,,,,,,,FALSE
+0,8/24/2016,,1,7,,TRUE,,0,,,,,,,,9.402222222,13.7175,Minor Robbery,,,,,,,FALSE
+0,8/22/2016,,1,3,,TRUE,,0,,,,,,,,4.75,11.8,,,,,,,,FALSE
+0,8/19/2016,,1,2,,TRUE,,0,,,,,,,,4.733333333,11.81666667,,,,,,,,FALSE
+0,8/24/2016,,1,,,FALSE,,0,,,,,,,,5.5,2.333333333,,,,,,,,FALSE
+0,1/22/2016,,1,,,FALSE,,0,,,,,,,,5.25,3.216666667,,,,,,,,TRUE
+0,1/23/2016,,,,,TRUE,,0,,,,,,,,4.366666667,8.583333333,,,,,,,,FALSE
+0,5/3/2016,,,,,TRUE,,0,,,,,,,,5.85,13.43333333,Minor Robbery,,,,,,,FALSE
+0,7/26/2016,,1,1,,TRUE,,0,,,,,,,,4.9,1.75,Minor Robbery,,,,,,,TRUE
+0,7/24/2016,,1,3,,TRUE,,0,,,,,,,,6.433333333,3.316666667,,,,,,,,TRUE
+0,7/17/2016,,1,1,,TRUE,,0,,,,,,,,4.783333333,11.78333333,Minor Robbery,,,,,,,FALSE
+0,7/16/2016,,1,,,TRUE,,0,,,,,,,,4.733333333,11.8,Minor Robbery,,,,,,,FALSE
+0,7/4/2016,,1,,,TRUE,,0,,,,,,,,4.733333333,11.8,Minor Robbery,,,,,,,FALSE
+0,7/8/2016,,1,1,,TRUE,,0,,,,,,,,6.416666667,3.366666667,,,,,,,,TRUE
+0,9/1/2016,,1,3,,TRUE,,0,,,,,,,,4.9,1.683333333,Minor Robbery,,,,,,,FALSE
+0,7/7/2016,,2,20,,TRUE,,0,,,,,,,,3.25,4.883333333,Minor Robbery,,,,,,,FALSE
+0,2/9/2016,,1,4,,TRUE,,0,,,,,,,,5.866666667,13.03333333,Minor Robbery,,,,,,,FALSE
+0,6/6/2016,,3,,,FALSE,,0,,,,,,,,5.366666667,2.4,,,,,,,,FALSE
+0,1/24/2016,,1,2,,TRUE,,0,,,,,,,,5.833333333,13.41666667,Minor Robbery,,,,,,,FALSE
+0,4/28/2016,,1,,,FALSE,,0,,,,,,,,4.316666667,4.433333333,,,,,,,,FALSE
+0,8/17/2016,,,,,TRUE,,0,,,,,,,,4.9,5.516666667,,,,,,,,TRUE
+0,8/18/2016,,,,,TRUE,,0,,,,,,,,,,,,,,,,,TRUE
+0,7/16/2016,,1,,,FALSE,,0,,,,,,,,0.016666667,0.1,,,,,,,,FALSE
+0,9/16/2016,,1,12,,TRUE,,0,,,,,,,,3.766666667,5.433333333,Minor Robbery,,,,,,,FALSE
+0,9/14/2016,,1,3,,TRUE,,0,,,,,,,,4.866666667,1.683333333,,,,,,,,FALSE
+0,9/10/2016,,,3,,TRUE,,0,,,,,,,,4.9,1.633333333,,,,,,,,FALSE
+0,6/13/2016,,1,6,,FALSE,,0,,,,,,,,4.5,7.65,,,,,,,,TRUE
+0,6/4/2016,,,,,TRUE,,0,,,,,,,,,,,,,,,,,TRUE
+0,4/13/2016,,,,,TRUE,,0,,,,,,,,4.233333333,8.016666667,,,,,,,,FALSE
+0,2/26/2016,,,,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/21/2016,,1,6,,TRUE,,0,,,,,,,,9.313055556,13.76416667,Minor Robbery,,,,,,,FALSE
+0,10/7/2016,,,3,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,,,TRUE
+0,9/11/2016,,,,,TRUE,,0,,,,,,,,4.75,11.83333333,Minor Robbery,,,,,,,FALSE
+0,1/25/2016,,,,,FALSE,,0,,,,,,,,4.7625,6.8,,,,,,,,TRUE
+0,5/5/2016,,2,,,FALSE,,0,,,,,,,,3.833333333,5.4,,,,,,,,FALSE
+0,1/14/2016,,1,5,,FALSE,,0,,,,,,,,5.6,5,,,,,,,,FALSE
+0,11/1/2016,,1,6,,FALSE,,0,,,,,,,,4.516666667,7.716666667,,,,,,,,TRUE
+0,11/3/2016,,1,,,TRUE,,0,,,,,,,,4.870277778,1.659722222,Minor Robbery,,,,,,,FALSE
+0,11/5/2016,,1,5,,TRUE,,0,,,,,,,,6.35,3.316666667,,,,,,,,FALSE
+0,12/1/2016,,1,2,,TRUE,,0,,,,,,,,8.758333333,13.29722222,Minor Robbery,,,,,,,FALSE
+0,12/9/2016,,1,,,FALSE,,0,,,,,,,,,,,,,,,,,FALSE
+0,1/19/2016,,1,2,,TRUE,,0,,,,,,,,5.216666667,4.033333333,Minor Robbery,,,,,,,FALSE
+0,12/9/2016,,1,,,FALSE,,0,,,,,,,,,,,,,,,,,FALSE
+0,1/21/2016,,2,,,FALSE,,0,,,,,,,,,,,,,,,,,TRUE
+0,2/19/2016,,,,,FALSE,,0,,,,,,,,,,,,,,,,,TRUE
+0,3/12/2016,,1,9,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,4/14/2016,,,,,TRUE,,0,,,,,,,,,,,,,,,,,FALSE
+0,4/15/2016,,,,,TRUE,,0,,,,,,,,,,,,,,,,,FALSE
+0,9/1/2016,,1,5,,FALSE,,0,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,11/5/2016,,1,5,,FALSE,,0,,,,,,,,,,,,,,,,,TRUE
+0,5/22/2016,,,,,FALSE,,0,,,,,,,,4.45,7.716666667,Minor Robbery,,,,,,,FALSE
+0,5/23/2016,,1,11,,FALSE,,0,,,,,,,,,,Large Scale Robbery,,,,,,,FALSE
+0,7/22/2016,,,,,FALSE,,0,,,,,,,,5.083333333,6.033333333,,,,,,,,TRUE
+0,1/22/2016,,,,,FALSE,,0,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,4/14/2016,,,1,,FALSE,,0,,,,,,,,4.9,1.65,,,,,,,,FALSE
+0,8/15/2016,,,,,FALSE,,0,,,,,,,,0,0,,,,,,,,TRUE
+0,5/2/2016,,,1,,TRUE,,0,,,,InPort,,,,-4.066666667,39.68333333,Minor Robbery,,,,,,,
+0,1/27/2016,,4,,,FALSE,,0,,,,Open,,,,23.13333333,59.53333333,,,,,,,,
+0,1/16/2016,,,,,TRUE,,0,,,,,,,,,,Minor Robbery,,,,,http://www.msrisk.com/wp-content/uploads/2016/02/Maritime-Security-Review-18-24-January-2016.pdf,,
+0,7/22/2016,,2,16,,FALSE,,0,,,,Open,,,,13.61666667,42.58333333,,,,,,,,
+0,9/6/2016,,,,,TRUE,,0,,,,InPort,,,,-19.83333333,34.86666667,Minor Robbery,,,,,MAST,,
+0,4/15/2016,,,,,FALSE,,0,,,,Open,,,,,,,,,,,,,
+0,2/20/2016,,3,,,FALSE,,0,,,,Open,,,,14.7,51.46666667,,,,,,,,
+0,4/24/2016,,2,,,FALSE,,0,,,,Open,,,,14.41666667,49.13333333,,,,,,,,
+0,5/10/2016,,3,,,FALSE,,0,,,,Open,,,,21.26888889,67.30055556,,,,,,ReCAAP and UKMTO,,
+0,5/16/2016,,5,,,FALSE,,0,,,,Open,,,,14.75,50.96666667,,,,,,http://www.marineinsight.com/shipping-news/pirates-attempt-board-container-ship-gulf-aden/,,
+0,5/2/2016,,4,,,FALSE,,0,,,,Open,,,,12.23583333,44.26805556,,,,,,,,
+0,1/12/2016,,3,4,,FALSE,,0,,,,Open,,,,14.16666667,52.03333333,,,,,,,,
+0,4/12/2016,,3,,,FALSE,,0,,,,Open,,,,,,,,,,,http://www.marinelink.com/news/thwarts-indian-pirate408474,,
+0,3/3/2016,,,1,,TRUE,,0,,,,InPort,,,,3.85,4.65,Minor Robbery,,,,,,,
+0,5/8/2016,,1,,,FALSE,,0,,,,Open,,,,9.736111111,61.18333333,,,,,,"IMO GISIS, UKMTO, and MSCHOA",,
+0,8/24/2016,,At least 2,,,FALSE,,0,,,,Open,,,,13.66666667,42.9,,,,,,IMO GISIS,,
+0,10/3/2016,,1,6,,FALSE,,0,,,,Open,,,,-14.01666667,42.81666667,,,,,,NCAG PATS,,
+0,10/25/2016,,1,,,FALSE,,0,,,,Open,,,,12.535,43.535556,,,,,,"MAST, UKMTO, http://www.reuters.com/article/us-yemen-shipping-attack-idUSKCN12Q1UQ",,
+0,2/3/2016,,,4,,FALSE,,0,,,,Open,,,,,,,,,,,,,
+0,7/6/2016,,1,,,FALSE,,0,,,,Open,,,,,,,,,,,UKMTO,,
+0,10/22/2016,,1,6,,FALSE,,0,,,,Open,,,,12.633611,59.449167,,,,,,"NCAG PATS,ONI, and http://eunavfor.eu/eu-naval-force-operation-commander-reinforces-need-for-vigilance-at-sea-as-chemical-tanker-attacked-by-suspected-somali-pirates/",,
+0,11/5/2016,,,,,TRUE,,0,,,,Anchorage,,,,-21.65,35.416667,Minor Robbery,,,,,"http://www.safety4sea.com/wp-content/uploads/2016/12/ONI-World-Wide-Threat-to-Shipping-1-30-November-2016-2016_11.pdf,http://www.noonsite.com/Countries/Mozambique/mozambique-bazaruto-outboard-theft-november-2016",,
+0,10/30/2016,,,3,,TRUE,,0,,,,Anchorage,,,,-15.716667,46.3,Minor Robbery,,,,,"http://www.safety4sea.com/wp-content/uploads/2016/12/ONI-World-Wide-Threat-to-Shipping-1-30-November-2016-2016_11.pdf, http://www.noonsite.com/Countries/Madagascar/madagascar-mahajanga-armed-robbery-october-2016",,
+0,12/22/2016,,2,10,,FALSE,,0,,,,Open,,,,12.668889,43.334167,,,,,,UKMTO,,
+0,12/23/2016,,3,,,FALSE,,0,,,,Open,,,,15.751944,41.300278,,,,,,UKMTO,,
+0,6/16/2016,,,,,FALSE,,0,,,,Open,,,,11.867351,45.010986,,,,,,UKMTO and Risk Intelligence,,
+0,7/1/2016,,1,,,FALSE,,0,,,,Open,,,,13.766667,50.733333,,,,,,"Risk Intelligence, UKMTO",,
+0,12/5/2016,,,,,FALSE,,0,,,,Open,,,,4.466944,53.367222,,,,,,,,
+0,10/27/2016,,,,,FALSE,,0,,,,Open,,,,13.6602,50.8243,,,,,,,,
+0,10/1/2016,,,,,FALSE,,0,,,,Open,,,,,,,,,,,,,
+0,10/9/2016,,,,,FALSE,,0,,,,Open,,,,,,,,,,,,,
+0,1/7/2016,,,,,FALSE,,0,,,,Anchorage,,,,22.817,70.092,,,,,,ReCAAP,,
+0,1/11/2016,,,,,TRUE,,0,,,,Anchorage,,,,22.781,69.983,Minor Robbery,,,,,"ReCAAP, ONI, MARLO PATS 21 JAN 16",,
+0,1/11/2016,,,5,,FALSE,,0,,,,Anchorage,,,,22.767,69.983,,,,,,"ReCAAP,  MARLO PATS 21 JAN 16",,
+0,1/25/2016,,1,5,,TRUE,,0,,,,Anchorage,,,,22.806,70.05,Minor Robbery,,,,,ReCAAP,,
+0,1/28/2016,,,6,,FALSE,,0,,,,Anchorage,,,,22.817,70.117,Minor Robbery,,,,,"ReCAAP, http://worldmaritimenews.com/archives/181797/pirates-attack-croatian-tanker-in-indias-kandla-port/",,
+0,2/2/2016,,,,,FALSE,,0,,,,Anchorage,,,,,,,,,,,MAST Report 03 February 2016,,
+0,2/8/2016,,1,5,,TRUE,,0,,,,Anchorage,,,,22.808,70.025,Minor Robbery,,,,,ReCAAP,,
+0,2/14/2016,,,4,,FALSE,,0,,,,Anchorage,,,,22.767,70,Minor Robbery,,,,,,,
+0,5/25/2016,,1,5,,FALSE,,0,,,,Open,,,,,,,,,,,ReCAAP,,
+0,10/28/2016,,,,,FALSE,,0,,,,Open,,,,,,,,,,,EUNAVFOR,,
+0,1/1/2016,,,,,TRUE,,22,,,,,,,,38.81666667,118.8166667,Bunkering,,,,,,,FALSE
+0,1/4/2016,,,,,TRUE,,22,,,,,,,,20.6875,107.1755556,Minor Robbery,,,,,,,FALSE
+0,1/6/2016,,,10,,TRUE,,22,,,,,,,,20.71944444,107.175,Minor Robbery,,,,,,,FALSE
+0,1/7/2016,,,,,FALSE,,18,,,,,,,,22.81666667,70.09166667,,,,,,,,TRUE
+0,1/11/2016,,,,,TRUE,,22,,,,,,,,22.78055556,69.98333333,Minor Robbery,,,,,,,TRUE
+0,1/11/2016,,,5,,FALSE,,20,,,,,,,,22.76666667,69.98333333,,,,,,,,TRUE
+0,1/14/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,1/15/2016,,,3,,TRUE,,25,,,,,,,,0.744444444,104.1675,Minor Robbery,,,,,,,FALSE
+0,1/17/2016,,1,,,TRUE,,5,,,,,,,,4.05,105.8666667,,,,,,,,FALSE
+0,1/23/2016,,,,,TRUE,,,,,,,,,,17.65,83.4,Minor Robbery,,,,,,,FALSE
+0,1/25/2016,,1,5,,TRUE,,20,,,,,,,,22.80638889,70.05,Minor Robbery,,,,,,,TRUE
+0,1/28/2016,,,6,,TRUE,,22,,,,,,,,22.81666667,70.11666667,Minor Robbery,,,,,,,TRUE
+0,2/2/2016,,,,,FALSE,,,,,,,,,,,,,,,,,,,TRUE
+0,2/8/2016,,1,5,,TRUE,,20,,,,,,,,22.80833333,70.025,Minor Robbery,,,,,,,TRUE
+0,2/9/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,2/14/2016,,,4,,FALSE,,22,,,,,,,,22.76666667,70,,,,,,,,TRUE
+0,2/14/2016,,,,,TRUE,,20,,,,,,,,13.71666667,121.0333333,Minor Robbery,,,,,,,FALSE
+0,2/14/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,2/19/2016,,6,,,TRUE,,11,,,,,,,,21.24444444,72.28333333,Minor Robbery,,,,,,,FALSE
+0,2/19/2016,,,,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,3/4/2016,,,,,TRUE,,22,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,3/4/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,3/6/2016,,,,,TRUE,,11,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,3/10/2016,,,,,TRUE,,,,,,,,,,,,,,,,,,,TRUE
+0,3/22/2016,,,5,,TRUE,,22,,,,,,,,-6.116666667,106.8666667,Minor Robbery,,,,,,,FALSE
+0,3/26/2016,,,17,,TRUE,,11,,,,,,,,5.266666667,120.0833333,,,,,,,,FALSE
+0,3/30/2016,,3,,,FALSE,,22,,,,,,,,-6,106.9,,,,,,,,FALSE
+0,4/1/2016,,,4,,TRUE,,22,,,,,,,,-0.255555556,117.5888889,Minor Robbery,,,,,,,FALSE
+0,4/1/2016,,1,8,,TRUE,,11,,,,,,,,4.118055556,118.9075,Minor Robbery,,,,,,,FALSE
+0,4/1/2016,,,6,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,4/3/2016,,,5,,TRUE,,20,,,,,,,,-5.994444444,106.9083333,,,,,,,,FALSE
+0,4/6/2016,,1,2,,TRUE,,11,,,,,,,,1.269444444,104.0888889,Minor Robbery,,,,,,,FALSE
+0,4/10/2016,,,,,TRUE,,24,,,,,,,,13.75944444,121.0172222,Minor Robbery,,,,,,,FALSE
+0,4/12/2016,,,2,,TRUE,,20,,,,,,,,-6.919444444,110.3722222,Minor Robbery,,,,,,,FALSE
+0,4/12/2016,,1,3,,FALSE,,30,,,,,,,,,,,,,,,,,FALSE
+0,4/15/2016,,1,5,,TRUE,,10,,,,,,,,4.516666667,119,,,,,,,,FALSE
+0,4/16/2016,,,5,,TRUE,,,,,,,,,,1.402777778,104.5666667,,,,,,,,FALSE
+0,4/16/2016,,1,3,,TRUE,,11,,,,,,,,,,,,,,,,,FALSE
+0,4/17/2016,,1,4,,FALSE,,18,,,,,,,,1.5,104.8666667,,,,,,,,FALSE
+0,4/19/2016,,,1,,TRUE,,24,,,,,,,,3.933333333,98.75,,,,,,,,FALSE
+0,4/21/2016,,1,,,FALSE,,22,,,,,,,,10.63333333,120.5666667,,,,,,,,FALSE
+0,4/23/2016,,,,,TRUE,,24,,,,,,,,37.84722222,120.0416667,Bunkering,,,,,,,FALSE
+0,4/25/2016,,1,4,,TRUE,,22,,,,,,,,1.159722222,103.9525,Minor Robbery,,,,,,,FALSE
+0,4/29/2016,,,,,TRUE,,22,,,,,,,,38.93055556,119.2388889,Bunkering,,,,,,,FALSE
+0,4/30/2016,,1,2,,TRUE,,24,,,,,,,,17.58333333,83.4,Minor Robbery,,,,,,,FALSE
+0,5/4/2016,,,,,TRUE,,22,,,,,,,,-1.333333333,116.8666667,Minor Robbery,,,,,,,FALSE
+0,5/4/2016,,,4,,TRUE,,22,,,,,,,,-0.25,117.6666667,Minor Robbery,,,,,,,FALSE
+0,5/7/2016,,,9,,FALSE,,21,,,,,,,,-2.08,108.6575,Bunkering,,,,,,,FALSE
+0,5/8/2016,,,1,,TRUE,,24,,,,,,,,3.355555556,109.6,,,,,,,,FALSE
+0,5/8/2016,,,1,,TRUE,,24,,,,,,,,17.61694444,83.36666667,,,,,,,,FALSE
+0,5/8/2016,,,,,TRUE,,24,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,5/9/2016,,1,,,TRUE,,20,,,,,,,,10.20277778,107.0736111,Minor Robbery,,,,,,,FALSE
+0,5/10/2016,,3,,,FALSE,,24,,,,,,,,21.28888889,67.30555556,,,,,,,,TRUE
+0,5/13/2016,,,5,,FALSE,,30,,,,,,,,,,,,,,,,,FALSE
+0,5/15/2016,,1,7,,FALSE,,20,,,,,,,,22.1,91.75,,,,,,,,FALSE
+0,5/18/2016,,,,,TRUE,,22,,,,,,,,-0.233333333,117.5666667,Minor Robbery,,,,,,,FALSE
+0,5/19/2016,,,4,,TRUE,,60,,,,,,,,1.183333333,103.95,Minor Robbery,,,,,,,FALSE
+0,5/21/2016,,,,,TRUE,,24,,,,,,,,-6.047222222,106.9,Minor Robbery,,,,,,,FALSE
+0,5/21/2016,,1,6,,TRUE,,11,,,,,,,,1.166666667,103.9666667,,,,,,,,FALSE
+0,5/21/2016,,2,10,,FALSE,,,,,,,,,,,,,,,,,,,FALSE
+0,5/25/2016,,1,5,,FALSE,,11,,,,,,,,,,,,,,,,,TRUE
+0,5/26/2016,,,12,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,6/2/2016,,2,,,TRUE,,11,,,,,,,,,,,,,,,,,FALSE
+0,6/3/2016,,,,,TRUE,,10,,,,,,,,3.098333333,112.4497222,Bunkering,,,,,,,FALSE
+0,6/8/2016,,,,,TRUE,,6,,,,,,,,,,,,,,,,,FALSE
+0,6/14/2016,,,5,,TRUE,,20,,,,,,,,22.13333333,91.73333333,Minor Robbery,,,,,,,FALSE
+0,6/14/2016,,1,,,TRUE,,12,,,,,,,,,,,,,,,,,FALSE
+0,6/15/2016,,2,,,FALSE,,24,,,,,,,,8.284166667,150.8844444,,,,,,,,FALSE
+0,6/16/2016,,1,5,,TRUE,,18,,,,,,,,1.175,103.9611111,Minor Robbery,,,,,,,FALSE
+0,6/16/2016,,,3,,TRUE,,24,,,,,,,,,,,,,,,,,FALSE
+0,6/18/2016,,1,3,,FALSE,,24,,,,,,,,1.685833333,101.4838889,,,,,,,,FALSE
+0,6/18/2016,,1,5,,TRUE,,22,,,,,,,,1.695833333,101.5102778,,,,,,,,FALSE
+0,6/21/2016,,,3,,TRUE,,22,,,,,,,,1.695833333,101.5102778,Minor Robbery,,,,,,,FALSE
+0,6/22/2016,,2,,,TRUE,,13,,,,,,,,2.744444444,119.5927778,,,,,,,,FALSE
+0,6/28/2016,,,10,,TRUE,,24,,,,,,,,3,105.1666667,Minor Robbery,,,,,,,FALSE
+0,6/28/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,6/28/2016,,,2,,FALSE,,24,,,,,,,,-1.466666667,116.8,,,,,,,,FALSE
+0,6/28/2016,,1,,,TRUE,,24,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,6/30/2016,,,,,TRUE,,5,,,,,,,,21.95,89.99611111,,,,,,,,FALSE
+0,7/3/2016,,,,,TRUE,,22,,,,,,,,-0.251388889,117.6175,Minor Robbery,,,,,,,FALSE
+0,7/9/2016,,,3,,TRUE,,7,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,7/10/2016,,,,,TRUE,,22,,,,,,,,-3.683333333,114.4166667,Minor Robbery,,,,,,,FALSE
+0,7/15/2016,,1,5,,FALSE,,22,,,,,,,,-0.284722222,117.6677778,,,,,,,,FALSE
+0,7/16/2016,,3,6,,TRUE,,24,,,,,,,,7.166666667,125.6666667,Minor Robbery,,,,,,,FALSE
+0,7/16/2016,,,7,,TRUE,,22,,,,,,,,2.916666667,105.3166667,Minor Robbery,,,,,,,FALSE
+0,7/16/2016,,1,3/4/2017,,TRUE,,22,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,7/17/2016,,,,,TRUE,,21,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,7/18/2016,,,,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,7/24/2016,,1,3,,TRUE,,22,,,,,,,,-0.216666667,117.55,Minor Robbery,,,,,,,FALSE
+0,7/25/2016,,1,5,,FALSE,,11,,,,,,,,,,,,,,,,,FALSE
+0,7/29/2016,,,2,,TRUE,,22,,,,,,,,10.2675,107.0397222,Minor Robbery,,,,,,,FALSE
+0,8/3/2016,,,,,TRUE,,3,,,,,,,,,,,,,,,,,FALSE
+0,8/7/2016,,,5,,TRUE,,17,,,,,,,,2.0025,104.8691667,Minor Robbery,,,,,,,FALSE
+0,8/7/2016,,1,3,,TRUE,,22,,,,,,,,10.25138889,107.0238889,Minor Robbery,,,,,,,FALSE
+0,8/12/2016,,"3, 1 mother vessel",,,FALSE,,24,,,,,,,,,,,,,,,,,FALSE
+0,8/15/2016,,,,,FALSE,,5,,,,,,,,,,,,,,,,,FALSE
+0,8/18/2016,,,4,,FALSE,,24,,,,,,,,,,,,,,,,,FALSE
+0,8/19/2016,,1,4,,FALSE,,11,,,,,,,,1.183333333,103.8666667,,,,,,,,FALSE
+0,8/25/2016,,,4,,TRUE,,13,,,,,,,,,,,,,,,,,FALSE
+0,8/25/2016,,,,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,8/25/2016,,,,,TRUE,,,,,,,,,,,,,,,,,,,FALSE
+0,8/28/2016,,,7,,TRUE,,1,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/6/2016,,,4,,TRUE,,22,,,,,,,,1.716666667,101.4333333,Minor Robbery,,,,,,,FALSE
+0,9/7/2016,,,16,,FALSE,,,,,,,,,,,,,,,,,,,TRUE
+0,9/8/2016,,,4,,TRUE,,24,,,,,,,,1.685555556,101.4852778,Minor Robbery,,,,,,,FALSE
+0,9/9/2016,,,9,,TRUE,,18,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/10/2016,,,7,,TRUE,,16,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/10/2016,,,8,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/13/2016,,,,,TRUE,,20,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/14/2016,,,,,TRUE,,22,,,,,,,,22.21805556,91.68388889,Minor Robbery,,,,,,,FALSE
+0,9/16/2016,,,,,TRUE,,11,,,,,,,,0.730555556,104.1666667,Minor Robbery,,,,,,,FALSE
+0,9/16/2016,,,,,TRUE,,18,,,,,,,,-5.5,105.2833333,Minor Robbery,,,,,,,FALSE
+0,9/18/2016,,,,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/20/2016,,,,,TRUE,,5,,,,,,,,,,Large Scale Robbery,,,,,,,FALSE
+0,9/21/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,9/25/2016,,,3,,TRUE,,22,,,,,,,,-7.766666667,109.0666667,Minor Robbery,,,,,,,FALSE
+0,9/27/2016,,,6,,TRUE,,27,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/27/2016,,,6,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,9/27/2016,,,3,,TRUE,,18,,,,,,,,10.25,107.0166667,Minor Robbery,,,,,,,FALSE
+0,10/1/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,10/2/2016,,1,3,,TRUE,,22,,,,,,,,-5.483333333,105.2833333,Minor Robbery,,,,,,,FALSE
+0,10/4/2016,,,,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,10/6/2016,,,4,,TRUE,,22,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,10/6/2016,,,4,,TRUE,,22,,,,,,,,1.701388889,101.4841667,Minor Robbery,,,,,,,FALSE
+0,10/8/2016,,3,,,FALSE,,22,,,,,,,,,,,,,,,,,FALSE
+0,10/12/2016,,1,3,,FALSE,,22,,,,,,,,10.26722222,107.0636111,,,,,,,,FALSE
+0,10/12/2016,,,4,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,10/20/2016,,,,,TRUE,,24,,,,,,,,1.7125,101.4644444,Minor Robbery,,,,,,,FALSE
+0,10/20/2016,,1,10,,TRUE,,18,,,,,,,,4.535833333,119.5513889,Minor Robbery,,,,,,,FALSE
+0,10/24/2016,,1,6,,TRUE,,9,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,10/25/2016,,2,10,,TRUE,,10,,,,,,,,4.146666667,112.5,Minor Robbery,,,,,,,FALSE
+0,10/25/2016,,,,,TRUE,,2,,,,,,,,,,,,,,,,,FALSE
+0,10/26/2016,,1,,,FALSE,,20,,,,,,,,10.39055556,107.0541667,,,,,,,,FALSE
+0,11/5/2016,,,5,,TRUE,,3,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,11/5/2016,,,5,,TRUE,,4,,,,,,,,,,,,,,,,,FALSE
+0,11/5/2016,,1,2,,TRUE,,24,,,,,,,,-6.037777778,106.8891667,Minor Robbery,,,,,,,FALSE
+0,11/6/2016,,,,,FALSE,,24,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,11/6/2016,,,,,TRUE,,2,,,,,,,,,,,,,,,,,FALSE
+0,11/9/2016,,,10,,TRUE,,24,,,,,,,,1.684722222,101.5005556,Minor Robbery,,,,,,,FALSE
+0,11/11/2016,,,10,,TRUE,,18,,,,,,,,6.666666667,122.5166667,Minor Robbery,,,,,,,FALSE
+0,11/13/2016,,6,,,FALSE,,24,,,,,,,,3.667777778,119.8516667,,,,,,,,FALSE
+0,11/15/2016,,,,,TRUE,,22,,,,,,,,1.433888889,104.7513889,Minor Robbery,,,,,,,FALSE
+0,11/16/2016,,1,5,,FALSE,,22,,,,,,,,4.384444444,119.5166667,,,,,,,,FALSE
+0,11/19/2016,,,,,TRUE,,22,,,,,,,,-0.25,117.5888889,Minor Robbery,,,,,,,FALSE
+0,11/19/2016,,1,5,,TRUE,,5,,,,,,,,4.820833333,118.7727778,Minor Robbery,,,,,,,FALSE
+0,11/20/2016,,,,,FALSE,,22,,,,,,,,,,,,,,,,,FALSE
+0,11/20/2016,,,5,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,11/20/2016,,1,,,FALSE,,22,,,,,,,,5.568888889,119.7858333,,,,,,,,FALSE
+0,11/20/2016,,1,2,,FALSE,,22,,,,,,,,-3.683333333,114.4166667,,,,,,,,FALSE
+0,11/23/2016,,1,8,,FALSE,,22,,,,,,,,6.363888889,119.9055556,,,,,,,,FALSE
+0,11/23/2016,,2,2,,FALSE,,22,,,,,,,,10.26666667,107.0055556,,,,,,,,FALSE
+0,11/24/2016,,1,10,,FALSE,,22,,,,,,,,5.785277778,119.8522222,,,,,,,,FALSE
+0,11/24/2016,,1,7,,FALSE,,22,,,,,,,,5.918333333,119.8338889,,,,,,,,FALSE
+0,11/25/2016,,1,10,,FALSE,,22,,,,,,,,5.802777778,119.8583333,,,,,,,,FALSE
+0,11/26/2016,,1,,,FALSE,,20,,,,,,,,10.39055556,107.0541667,,,,,,,,FALSE
+0,11/26/2016,,,,,TRUE,,5,,,,,,,,,,,,,,,,,TRUE
+0,11/26/2016,,,,,TRUE,,11,,,,,,,,1.183333333,103.65,Minor Robbery,,,,,,,FALSE
+0,12/1/2016,,,3,,FALSE,,18,,,,,,,,-3.6675,114.4505556,,,,,,,,FALSE
+0,12/1/2016,,1,4,,FALSE,,,,,,,,,,-7.766666667,109.0666667,Minor Robbery,,,,,,,FALSE
+0,12/2/2016,,,,,FALSE,,22,,,,,,,,1.085833333,104.1666667,,,,,,,,FALSE
+0,12/5/2016,,1,,,TRUE,,5,,,,,,,,,,,,,,,,,FALSE
+0,12/7/2016,,1,2,,TRUE,,22,,,,,,,,-0.244166667,117.5858333,Minor Robbery,,,,,,,FALSE
+0,12/8/2016,,1,3,,FALSE,,22,,,,,,,,5.484166667,119.6344444,,,,,,,,FALSE
+0,12/8/2016,,1,7,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,12/8/2016,,1,7,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,12/8/2016,,1,7,,TRUE,,5,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,12/8/2016,,,3,,TRUE,,22,,,,,,,,-0.302777778,117.675,Minor Robbery,,,,,,,FALSE
+0,12/20/2016,,,,,TRUE,,4,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,12/20/2016,,,10,,TRUE,,40,,,,,,,,,,Minor Robbery,,,,,,,FALSE
+0,12/29/2016,,,2,,FALSE,,24,,,,,,,,1.702777778,101.5047222,,,,,,,,FALSE

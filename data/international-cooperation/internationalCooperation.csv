@@ -1,0 +1,31 @@
+country,iso3,ia2c0,ia2c1,ia2c2,ia2c3,ia2c4,ia2c6,ia2c7
+Angola,AGO,1,1,0,1,0,1,0
+Benin,BEN,1,0,0,3,0,,1
+Cameroon,CMR,1,0,0,2,0,,0
+Cape Verde,CPV,1,0,2,5,0,1,1
+Comoros,COM,0,1,0,0,1,,1
+Congo (Rep),COG,1,0,0,1,0,1,1
+Djibouti,DJI,0,1,0,0,1,,1
+DRC,COD,0,1,0,1,0,1,0
+Equatorial Guinea,GNQ,1,1,0,2,0,,1
+Gabon,GAB,1,1,2,2,0,1,0
+Gambia,GMB,0,0,2,5,0,,1
+Ghana,GHA,1,1,3,4,0,1,1
+Guinea,GIN,1,0,3,4,0,1,1
+Guinea-Bissau,GNB,0,0,0,5,0,,1
+Ivory Coast,CIV,1,1,0,4,0,1,1
+Kenya,KEN,1,1,1,0,1,1,1
+Liberia,LBR,1,0,1,4,0,1,1
+Madagascar,MDG,1,1,2,0,1,1,1
+Mauritius,MUS,1,1,3,0,1,,1
+Mozambique,MOZ,1,0,3,0,1,,1
+Namibia,NAM,1,0,1,0,0,,1
+Nigeria,NGA,1,0,1,3,0,1,1
+Sao Tome,STP,0,0,2,2,0,1,1
+Senegal,SEN,1,0,3,5,0,,1
+Seychelles,SYC,1,1,3,0,1,1,1
+Sierra Leone,SLE,1,0,0,4,0,1,0
+Somalia,SOM,0,1,2,0,1,1,0
+South Africa,ZAF,1,0,3,0,1,,1
+Tanzania,TZA,1,0,0,0,1,1,1
+Togo,TGO,1,0,2,3,0,1,1

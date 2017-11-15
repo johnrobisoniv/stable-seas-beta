@@ -1,0 +1,1012 @@
+body {
+  background-color: #0d3a58;
+}
+
+#holder {
+  margin-top: 50px;
+}
+
+#content-holder {
+  z-index: 5;
+  overflow-y: scroll;
+
+}
+
+#map-title {
+  margin-top: 70px;
+  background-color: green;
+  height: 30px;
+}
+
+.bgimg {
+  position: fixed;
+  margin-top: 250px;
+  margin-left: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+/* CSS for landing screen */
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1100; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: white; /* Black w/opacity */
+  opacity: 0.9;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  color: #0d3a58;
+}
+
+.overview .overlay {
+  height: 100%;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay-content p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+
+}
+
+.overlay-content img {
+    margin-bottom: 20px;
+}
+
+#stableseas-intro-logo {
+  width: 30%;
+}
+
+#one-earth-intro-logo {
+  width: 15%;
+}
+
+#ss-close-btn {
+  height: 50px;
+  background-color: #0d3a58;
+  padding: 17px;
+  border-radius: 10px;
+}
+
+#ss-close-btn:hover {
+  background-color: #1b6da5;
+}
+
+#ss-close-btn p {
+  font-size: 12px;
+  font-family: 'Nunito Sans' sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.overlay-small p {
+  font-size: 18px;
+
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/* CSS for nav */
+nav {
+  box-shadow: 0px 1px 3px grey;
+}
+#nav-menu {
+  margin-right: 100px;
+  float: right;
+}
+
+#logo {
+  height: 25px;
+}
+
+.navbar-default {
+  border: none;
+}
+
+.navbar-brand {
+  margin-left: -30px;
+}
+
+.cta {
+  float: right;
+  margin: auto;
+}
+
+
+
+  /* And for Issue Area nav */
+
+.ia {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ia:hover {
+  transition: all 0s;
+
+  opacity: 0.7;
+}
+
+.ia-nav {
+  height: 50px;
+
+
+}
+.ia-btn {
+  height: 50px;
+  display: table;
+  cursor: pointer;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.ia-btn:nth-child(0) {
+  border-left: 2px solid white;
+}
+
+
+.ia-btn:nth-child(n) {
+  border-right: 2px solid white;
+}
+
+.ia-btn:hover {
+
+}
+
+
+.ia-btn p {
+  font-family: 'Open Sans 500', sans-serif;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 4px;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+.ia-buffer {
+  height: 50px;
+  background-color: #0d3a58;
+}
+
+.small {
+  height: 15px;
+}
+.small p {
+  display: none;
+}
+
+
+/* CSS for menu */
+
+#map-menu {
+  width: 13%;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 5px #888888;
+  float: right;
+  margin-top: 70px;
+  position: fixed;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin-left: 47%;
+}
+#map-menu h1 {
+  font-size: 18px;
+}
+
+.nav li {
+  background-color: whitesmoke;
+}
+.nav li:hover {
+  background-color: lightgrey;
+}
+
+.nav #feedback-button {
+  background-color: #0c3b59;
+  /*margin: 5px 0px 0px 25px;*/
+  height: 40px;
+  margin-top: 5px;
+  color: white;
+}
+
+#feedback-link {
+  color: white;
+  padding: 10px;
+
+}
+
+ #feedback-button:hover {
+  background-color: #166598;
+}
+
+.switch {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: white;
+  padding: 5px;
+  color: grey;
+  cursor: pointer;
+  border-left: 5px solid white;
+  /*margin-top: 50px;*/
+}
+
+.switch:hover {
+  background-color: lightgrey;
+  border-left: 5px solid grey;
+  color: black;
+}
+
+.switch.active {
+  background-color: lightgrey;
+  color: black;
+}
+
+path.active {
+  /*stroke-width: 2px;*/
+}
+
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+}
+
+/* CSS for cards */
+
+.card {
+  display: block;
+  float: right;
+  margin-top: 70px;
+  background-color: white;
+  /*border: 1px solid lightgrey;*/
+  box-shadow: 0px 0px 10px #888888;
+  margin-right: 4%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.card-layer {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h4.card-header {
+  font-size: 16px;
+  color: darkgrey;
+}
+
+div.card-header {
+
+}
+
+div.card-header span {
+  float: right;
+}
+
+.invisible {
+  display: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+h1 {
+  font-family: 'Lato', serif;
+  font-size: 32px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+
+h2.subheader {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+li {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.caption p {
+  font-style: italic;
+}
+
+.block {
+  /*background-color: #99C6E4;*/
+  margin: 0px -10px 5px 0px;
+  /*border-left: 5px solid #0071BC;*/
+  padding: 10px;
+}
+
+.big-text {
+  padding: 0;
+}
+.big-text p {
+  font-size: 18px;
+  padding: 5px 0px;
+}
+
+.attribution {
+  float: right;
+}
+
+.legend {
+  margin: 0px 0px 5px 0px;
+}
+span.glyphicon {
+  margin-left: 10px;
+}
+.legend-body {
+  padding: 15px;
+}
+
+h3.legend-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+
+table {
+    font-family: 'Open Sans', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+td, th {
+    /*border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 4px;
+    padding-left: 10px;
+}
+tr {
+  box-sizing: border-box;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.table-expand {
+  padding: 10px 0px 1px 15px;
+  cursor: pointer;
+
+}
+
+
+.links {
+  padding-left: 0px;
+  margin-top: 15px;
+}
+.link {
+  /*background-color: lightgrey;*/
+  margin: 10px 0px;
+  padding: 10px;
+  /*border-right:  5px solid grey;*/
+}
+
+.link:hover {
+  background-color: darkgrey;
+  border-right:  5px solid black;
+
+}
+
+.link p {
+  margin-bottom: 0px;
+}
+
+.title {
+  font-style: italic;
+}
+.glossary {
+  margin-bottom: 15px;
+}
+.glossary p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.video-thumb {
+  display: box;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+.background-video-image {
+  filter: brightness(50%);
+  position: relative;
+}
+
+.background-video-image:hover {
+  filter: brightness(90%);
+}
+
+.inner-thumb {
+  position:absolute;
+  pointer-events: none;
+}
+
+.video-gif {
+  position: relative;
+}
+
+/* CSS for map */
+
+.country {
+  fill: whitesmoke;
+  stroke: darkgrey;
+  opacity: 1;
+}
+/*.country:hover {
+  fill: lightgrey;
+}*/
+
+.country.in {
+  fill: #dadada;
+}
+.country.on {
+  fill: #9c9c9c;
+  stroke: darkslategrey;
+  z-index: 100000;
+}
+
+.w-sahara-line {
+  stroke: darkgrey;
+}
+
+.port {
+  fill: lightgrey;
+}
+
+/*.in:hover{
+  fill: lightgrey;
+  stroke: #0d3a58;
+}*/
+
+
+.eez {
+  fill: transparent;
+  stroke: #072031;
+  /*stroke-width: 1px*/
+}
+.pulse.eez {
+  stroke: #FC4C02;
+  /*stroke-width: 3px;*/
+}
+tr.pulse {
+  background-color: #FC4C02;
+
+}
+.pulse.country {
+  fill: #FC4C02;
+}
+
+
+.country-rank:hover {
+  background-color: #FC4C02;
+}
+.hidden {
+    display: none;
+}
+div.tooltip {
+    color: #222;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    position: fixed;
+    height: 180px;
+    pointer-events: none;
+}
+
+svg.tool {
+  width: 100%;
+  height: 100%;
+}
+
+div.tooltip h1 {
+  font-size: 24px;
+}
+
+.label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  pointer-events: none !important;
+}
+
+.label.out {
+  fill: grey;
+}
+
+.route-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  pointer-events: none !important;
+}
+
+.incident {
+  fill: gray;
+  border: 0.2px solid lightgrey;
+}
+.incident:hover {
+  fill: grey;
+  border: 1px solid darkgrey;
+}
+
+.cell {
+  fill: red;
+}
+
+.background {
+  fill: #0d3a58;
+}
+
+/*.fished {
+  fill: rgb(216, 226, 240);
+  stroke: rgb(31, 119, 180);
+}
+
+.hra {
+  fill: ;
+  stroke: goldenrod;
+  opacity: 0.4;
+}*/
+
+.waterways {
+  stroke: teal;
+  stroke-width: 0.5px;
+  fill: none;
+}
+
+svg#map-svg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin-top: 0px;
+  margin-left: -15px;
+  stroke-alignment: inner;
+}
+
+
+
+
+
+.disputed {
+  /*stroke: grey;*/
+  /*stroke-width: 3px;*/
+}
+
+g {
+  width: 100%;
+}
+
+
+/* CSS for footer */
+
+footer {
+  position: fixed;
+  box-shadow: 1px 0px 3px grey;
+}
+
+#social {
+  float: right;
+}
+
+.fa {
+  margin: 0 10px;
+}
+
+
+
+.col-lg-1-ss {
+  width: 9.2%;
+}
+
+
+/* Issue Area-specific rules */
+.maritime-enforcement {
+  background-color: rgb(216, 219, 238);
+}
+
+.maritime-mixed-migration {
+  background-color: rgb(239, 227, 210);
+}
+
+.piracy {
+  background-color: rgb(218, 228, 234);
+}
+
+.fisheries {
+  background-color: rgb(216, 238, 234);
+}
+
+.illicit-trade {
+  background-color: rgb(214, 231, 233);
+}
+
+.inline {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* Card-specific rules */
+
+
+.arms-flows {
+  fill: grey;
+}
+
+.iuu-incidents {
+  fill: #04A89C;
+  fill-opacity: 0.8;
+  stroke: white;
+}
+
+/*.cg-navy {
+  mask: url(#mask-stripe);
+}*/
+
+/* ia1c3 - Overview: Yaounde */
+.yaounde {
+
+}
+
+/* ia2c2 - International Cooperation: Maritime Disputes */
+.maritime-dispute {
+  fill-opacity: 0;
+  stroke-width: 3px;
+}
+
+/* ia2c5 - International Cooperation: East Africa (IRTC lanes)*/
+
+.irtc-west {
+  fill: green;
+}
+
+.irtc-east {
+  fill: red;
+}
+
+/* ia2c6 - International Cooperation: */
+.copper-incident {
+  stroke: lightgrey;
+  stroke-opacity: 1;
+  stroke-width: 0.5px;
+}
+/* ia4c2 - Maritime Enforcement: Maritime Domain Awareness */
+.center-location {
+  stroke: white;
+  fill-opacity: 0.8;
+}
+
+.center-location.both {
+  fill: purple;
+}
+
+.center-location.regional {
+  fill: blue;
+}
+
+.center-location.national {
+  fill: red;
+}
+
+/* ia5c3 - Maritime Enforcement: Toxic Dumping */
+
+.toxic-dumping-incident {
+  stroke: white;
+  fill-opacity: 0.7;
+}
+
+/* ia5c5 - Maritime Enforcement: The Role of Joint Exercises */
+
+.brew-00 {
+  padding: 5px;
+  background-color: #a6cee3;
+}
+
+.brew-01 {
+  padding: 5px;
+  background-color: #1f78b4;
+}
+
+.brew-10 {
+  padding: 5px;
+  background-color: #b2df8a;
+}
+
+.brew-11 {
+  padding: 5px;
+  background-color: #33a02c;
+  color: white;
+}
+
+.brew-20 {
+  padding: 5px;
+  background-color: #fb9a99;
+}
+
+.brew-21 {
+  padding: 5px;
+  background-color: #e31a1c;
+  color: white;
+}
+
+.brew-30 {
+  padding: 5px;
+  background-color: #fdbf6f;
+}
+
+.brew-31 {
+  padding: 5px;
+  background-color: #ff7f00;
+  color: white;
+}
+
+.brew-40 {
+  padding: 5px;
+  background-color: #cab2d6;
+}
+
+.brew-41 {
+  padding: 5px;
+  background-color: #6a3d9a;
+  color: white;
+}
+
+.legend-entries {
+  padding: 10px;
+  margin: 0px;
+}
+
+.light.legend-entries {
+  color: black;
+}
+
+/* ia5c4 - Maritime Enforcement: Where are the Coast Guards? */
+div.navy {
+  background-color: #1f78b4;
+  color: white;
+}
+
+div.maritime-law-enforcement {
+  background-color: #e31a1c;
+  color: white;
+}
+
+div.navy-and-maritime-law-enforcement {
+  background-color: #6a3d9a;
+  color: white;
+}
+
+
+
+
+/* ia5c3 - Coastal Welfare: War and Maritime Crimes */
+.coastal {
+  fill: #BEA347;
+  opacity: 0.2;
+}
+.nationwide {
+  fill: #255aa8;
+  opacity: 0.1;
+}
+
+/* ia6c3 - Blue Economy: Ports */
+
+.wpi-port {
+  fill-opacity: 0.5;
+  stroke: white;
+  stroke-width: 0.5px;
+}
+
+/* ia7c4 - Fisheries: Managing Coastal Resources */
+
+.buffer-24nm {
+  fill: none;
+  stroke: #04A89C;
+  opacity: 0.2;
+}
+
+.emperors {
+  fill: #04A89C;
+  fill-opacity: 0.5;
+  stroke: grey;
+}
+
+.landing-sites {
+  fill: green;
+  stroke: black;
+  fill-opacity: 0.3;
+}
+
+.coral {
+  fill: red;
+}
+
+.mog-road {
+  fill: none;
+  stroke: grey;
+}
+
+.mogadishu-label {
+  font-size: 0.2px;
+}
+
+.cape-town-label {
+  font-size: 0.4px;
+}
+
+
+/* ia8c1 - Piracy: Incidents East Africa */
+.piracy-incident {
+  fill: 0.5;
+}
+
+/* ia8c4 - Piracy: Offshore Oil Infrastructure */
+.offshore-oil {
+  fill: blue;
+
+}
+
+/* ia9c4 - Illicit Trade: The Wildlife Trafficking Crisis */
+.wildlife-port {
+  fill-opacity: 0.6;
+}
+
+/* ia10c1 - Maritime Mixed Migration: Beyond the Med */
+.migration-label {
+  width: 40px;
+  height: 40px;
+  stroke-width: 2px;
+}
+
+.migration-label-text {
+  font-size: 24px;
+}
+
+
+.ia10c1-1 {
+  background-color: #a6cee3;
+}
+
+.ia10c1-2 {
+  background-color: #b2df8a;
+}
+.ia10c1-3 {
+  background-color: #fb9a99;
+}
+
+.ia10c1-4 {
+  background-color: #fdbf6f;
+}
+
+.ia10c1-5 {
+  background-color: #cab2d6;
+}
+
+.migration-heading {
+  padding: 7px 10px 5px 10px;
+}
+
+/* ia10c3 - Maritime Mixed Migration: Closing the Canaries */
+.canary-routes circle {
+  fill-opacity: 0.8;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.east-africa-arms-flows circle {
+  fill-opacity: 0.8;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.southerly {
+  stroke: black;
+}

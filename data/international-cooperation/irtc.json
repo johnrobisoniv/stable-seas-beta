@@ -1,0 +1,51 @@
+{
+  "type": "Topology",
+  "arcs": [
+    [
+      [0, 0],
+      [0, 3],
+      [100, 97],
+      [0, -3],
+      [-100, -97]
+    ],
+    [
+      [0, 5],
+      [0, 3],
+      [100, 97],
+      [0, -3],
+      [-100, -97]
+    ]
+  ],
+  "transform": {
+    "scale": [0.08000000000199861, 0.02571428571428561],
+    "translate": [45.00000000009999, 11.799999999900137]
+  },
+  "objects": {
+    "irtc_lanes": {
+      "type": "GeometryCollection",
+      "geometries": [{
+        "arcs": [
+          [0]
+        ],
+        "type": "Polygon",
+        "properties": {
+          "OBJECTID": 1,
+          "Name": "irtc-east",
+          "Shape_Leng": 16.92972128122529,
+          "Shape_Area": 0.666666666550157
+        }
+      }, {
+        "arcs": [
+          [1]
+        ],
+        "type": "Polygon",
+        "properties": {
+          "OBJECTID": 2,
+          "Name": "irtc-west",
+          "Shape_Leng": 16.929721281225248,
+          "Shape_Area": 0.666666666549929
+        }
+      }]
+    }
+  }
+}
