@@ -363,6 +363,7 @@ $('#content-holder').on('click', '.table-expand', function () {
                })
             .on('click', function () { switchCard(parseInt(this.getAttribute('data-card'))); }); // ### click handler menu item ...
 
+
           // Load map data...
           var mapDataPath = card.map.path;
           if (card.map.load) {card.map.load(cardIndex, mapDataPath);}
@@ -396,6 +397,23 @@ $('#content-holder').on('click', '.table-expand', function () {
           }
 
         });
+
+        d3.select('#map-menu-wrapper')
+          .append('div')
+          .classed('map-content-holder', true)
+          .attr('id', 'tooltip-below-menu')
+          .style('height', '100px');
+
+        var ttip = d3.select('#tooltip-below-menu');
+
+        ttip.append('h1')
+          .classed('country-name', true)
+            .text('Country Name');
+
+        ttip.append('p')
+          .classed('country-score', true)
+          .append('span')
+          .text('score');
 
         $('#ia-maritimeMixedMigration')
           .parent()
@@ -1390,11 +1408,11 @@ function init() {
       ia.selectAll('p')
         .classed('invisible',true);
       ia.classed('small',true);
-      d3.select('#map-menu')
+      d3.select('#map-menu-wrapper')
         .transition()
         .style('margin-top', '30px');
     } else {
-      d3.select('#map-menu')
+      d3.select('#map-menu-wrapper')
         .transition()
         .style('margin-top', '70px');
 
@@ -1421,7 +1439,7 @@ d3.select('nav').on('mouseenter', function () {
     distanceY = window.pageYOffset || document.documentElement.scrollTop,
     shrinkOn = 30;
 
-  d3.select('#map-menu')
+  d3.select('#map-menu-wrapper')
     .transition()
     .style('margin-top', '70px');
 
