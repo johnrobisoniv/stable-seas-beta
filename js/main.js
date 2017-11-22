@@ -69,18 +69,11 @@
 
   // Set up the tooltip:
   var tooltip = d3.select('body').append('div')
-      .attr('class', 'hidden tooltip col-lg-2');
+      .attr('class', 'hidden tooltip col-sm-1');
 
       tooltip.append('h1');
       var tooltipRow = tooltip.append('div')
-        .classed('row', true);
-
-      tooltipRow.append('div')
-        .classed('col-lg-6 left', true);
-      tooltipRow.append('div')
-        .classed('col-lg-6 right', true);
-      // tooltip.append('svg')
-      //   .classed('tool', true);
+        .classed('row tooltip-content', true);
 
 
   // ... and the modals
@@ -211,16 +204,13 @@ $('#content-holder').on('click', '.table-expand', function () {
 
 function clearTooltip () {
   var ttip = d3.select('#tooltip-below-menu');
-
+  ttip.classed('muted', true);
   ttip.select('.country-name')
-    .classed('muted', true)
     .text('Country');
 
   ttip.select('.country-score')
-    .classed('muted', true)
     .text('Score /')
   ttip.select('.units')
-    .classed('muted',true)
     .text(' units');
 }
 
@@ -1000,13 +990,13 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
 
               if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
                 var coords = path.bounds(d);
-                var tooltip = d3.select('div.tooltip');
+                var tooltip = d3.select('#tooltip-below-menu')
+                  .classed('muted', false);
 
-                tooltip.style('left', function () {return coords[0][0] - 100 + 'px';})
-                  .style('top', function () {return coords[0][1] - 90 + 'px';})
-                  .classed('hidden', false);
-
-                var idx = issueAreaData.overview.metadata.indexData
+                var ttipObj = issueAreaData[issueArea].metadata.tooltip;
+                var units = ttipObj.units;
+                var val = ttipObj.val;
+                var idx = ttipObj.indexData
                   .filter(  function( obj ) {
                     return obj.iso3 == d.properties.ISO_A3_EH;
                   })[0];
@@ -1014,22 +1004,15 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
 
                 tooltip.select('h1')
                   .text(idx.country);
-                var left = d3.select('.left').html('');
-                var right = d3.select('.right').html('');
+
+                tooltip.select('.country-score')
+                  .text(idx[val]);
+
+                tooltip.select('.units')
+                  .text(' ' + units);
 
               //  console.log(idx);
-                for (var key in idx) {
-                  if (key != 'country' && key != 'iso3') {
-                    var i = Object.keys(idx).indexOf(key);
-                    if (i < 6) {
-                      left.append('p')
-                        .text(key + ': ' + idx[key]);
-                    } else {
-                      right.append('p')
-                        .text(key + ' ' + idx[key]);
-                    }
-                  }
-                }
+
               } else {
                 d3.select('.label.' + d.properties.ISO_A3_EH)
                   .classed('invisible', false);
@@ -1039,55 +1022,8 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           .on('mouseout', function (d) {
             d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', true);
-            d3.select('div.tooltip').classed('hidden', true);
 
-          })
-          .on('click', function (d) {
-
-            d3.select('#tooltip-below-menu')
-              .classed('muted', false);
-            var idx = issueAreaData.overview.metadata.indexData
-              .filter(  function( obj ) {
-                return obj.iso3 == d.properties.ISO_A3_EH;
-              })[0];
-
-
-            console.log(idx);
-
-            var holder = d3.select('#tooltip-below-menu');
-            // Do we want to dynamically set the key instead of relying on idx.val?
-
-            holder.classed('invisible', false);
-
-            holder.select('.country-name')
-              .text(idx.country);
-
-            holder.select('.country-score')
-              .text(idx.val);
-
-            holder.select('.units')
-              .text(' units!');
-
-
-
-
-
-
-              // Once we want to get the svg D3 graphic in, start here:
-            // var svgTool = d3.select('svg.tool'),
-            //   margin = {top: 20, right: 20, bottom: 30, left: 40},
-            //   width = +svg.attr('width'),
-            //   height = +svg.attr('height');
-            //
-            // var x = d3.scaleBand().rangeRound([0, width]),
-            //   y = d3.scaleBand().rangeRound([height,0]);
-            //
-            // var g = svg.append("g")
-            //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-            //console.log(idx);
-
-
+            clearTooltip();
           });
 
           var wSaharaCoords = [[-8.67, 27.67],[-13.17,27.67]];
@@ -1099,27 +1035,6 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
             .attr('stroke-dasharray', '2,2')
             .classed('w-sahara-line', true);
 
-          // The OLD Tooltip Code... this didn't work.
-        // .on('mousemove', function(d) {    // ### We should only be attaching this event listener to .included countries!!
-        //     var mouse = d3.mouse(map.node()).map(function(d) {
-        //         return parseInt(d);
-        //     });
-        //     // console.log(d);
-        //     tooltip.classed('hidden', false)
-        //         .attr('transform', function (d) {
-        //   //        console.log(d);
-        //           //return 'translate(' + path.centroid(d) + ')';
-        //         })
-        //         // .attr('style', 'left:' + (mouse[0]) +
-        //         //         'px; top:' + (mouse[1] + 5) + 'px')
-        //         .html(function () {
-        //     //      console.log(d);
-        //           return d.properties.NAME;
-        //         });
-        // })
-        // .on('mouseout', function() {
-        //     tooltip.classed('hidden', true);
-        // });
 
         labels.selectAll('.label')
           .data(countries).enter()

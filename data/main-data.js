@@ -14,6 +14,11 @@ var issueAreaData = {    // ### replace data with something more descriptive. is
       loaded point data
 
       */
+      tooltip: {
+        present: true,
+        units: 'murders per capita',
+        val: 'val'
+      },
       index: 1,
       code: 'overview',
       path: 'overview',
@@ -48,7 +53,7 @@ var issueAreaData = {    // ### replace data with something more descriptive. is
           d.illicitTrades = +d.illicitTrades;
           d.mixedMigration = +d.mixedMigration;
         });
-        issueAreaData[issueArea].metadata.indexData = vals;
+        issueAreaData[issueArea].metadata.tooltip.indexData = vals;
 
       });
     },
