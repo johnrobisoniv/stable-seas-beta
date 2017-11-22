@@ -209,6 +209,21 @@ $('#content-holder').on('click', '.table-expand', function () {
 
 });
 
+function clearTooltip () {
+  var ttip = d3.select('#tooltip-below-menu');
+
+  ttip.select('.country-name')
+    .classed('muted', true)
+    .text('Country');
+
+  ttip.select('.country-score')
+    .classed('muted', true)
+    .text('Score /')
+  ttip.select('.units')
+    .classed('muted',true)
+    .text(' units');
+}
+
 
 // 4 Functions
   // Master IA load function
@@ -401,19 +416,26 @@ $('#content-holder').on('click', '.table-expand', function () {
         d3.select('#map-menu-wrapper')
           .append('div')
           .classed('map-content-holder', true)
-          .attr('id', 'tooltip-below-menu')
-          .style('height', '100px');
+          .attr('id', 'tooltip-below-menu');
 
-        var ttip = d3.select('#tooltip-below-menu');
+        var ttip = d3.select('#tooltip-below-menu')
+          .classed('muted', true);
 
         ttip.append('h1')
           .classed('country-name', true)
             .text('Country Name');
 
-        ttip.append('p')
-          .classed('country-score', true)
-          .append('span')
-          .text('score');
+        var scoreHolder = ttip.append('p');
+
+        var score = scoreHolder.append('span')
+          .classed('country-score', true);
+
+        var units = scoreHolder.append('span')
+          .classed('units', true);
+
+
+      //  score.text('score');
+
 
         $('#ia-maritimeMixedMigration')
           .parent()
@@ -923,6 +945,7 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
               .classed('invisible', true);
           })
           .on('click', function (d) {
+
           //  console.log(d);
           //  console.log(path.bounds(d));
           });
@@ -973,47 +996,79 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           })
           .on('mouseenter', function (d) {
             //console.log(d);
-            d3.select('.label.' + d.properties.ISO_A3_EH)
-              .classed('invisible', false);
+
+
+              if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
+                var coords = path.bounds(d);
+                var tooltip = d3.select('div.tooltip');
+
+                tooltip.style('left', function () {return coords[0][0] - 100 + 'px';})
+                  .style('top', function () {return coords[0][1] - 90 + 'px';})
+                  .classed('hidden', false);
+
+                var idx = issueAreaData.overview.metadata.indexData
+                  .filter(  function( obj ) {
+                    return obj.iso3 == d.properties.ISO_A3_EH;
+                  })[0];
+                console.log(idx);
+
+                tooltip.select('h1')
+                  .text(idx.country);
+                var left = d3.select('.left').html('');
+                var right = d3.select('.right').html('');
+
+              //  console.log(idx);
+                for (var key in idx) {
+                  if (key != 'country' && key != 'iso3') {
+                    var i = Object.keys(idx).indexOf(key);
+                    if (i < 6) {
+                      left.append('p')
+                        .text(key + ': ' + idx[key]);
+                    } else {
+                      right.append('p')
+                        .text(key + ' ' + idx[key]);
+                    }
+                  }
+                }
+              } else {
+                d3.select('.label.' + d.properties.ISO_A3_EH)
+                  .classed('invisible', false);
+                d3.select('div.tooltip').classed('hidden', true);
+              }
           })
           .on('mouseout', function (d) {
             d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', true);
+            d3.select('div.tooltip').classed('hidden', true);
+
           })
           .on('click', function (d) {
 
-            if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
-              var coords = path.bounds(d);
-              var tooltip = d3.select('div.tooltip');
+            d3.select('#tooltip-below-menu')
+              .classed('muted', false);
+            var idx = issueAreaData.overview.metadata.indexData
+              .filter(  function( obj ) {
+                return obj.iso3 == d.properties.ISO_A3_EH;
+              })[0];
 
-              tooltip.style('left', function () {return coords[0][0] - 100 + 'px';})
-                .style('top', function () {return coords[0][1] - 90 + 'px';})
-                .classed('hidden', false);
 
-              var idx = issueAreaData.overview.metadata.indexData
-                .filter(  function( obj ) {
-                  return obj.iso3 == d.properties.ISO_A3_EH;
-                })[0];
+            console.log(idx);
 
-              tooltip.select('h1')
-                .text(idx.country);
-              var left = d3.select('.left').html('');
-              var right = d3.select('.right').html('');
+            var holder = d3.select('#tooltip-below-menu');
+            // Do we want to dynamically set the key instead of relying on idx.val?
 
-              console.log(idx);
-              for (var key in idx) {
-                if (key != 'country' && key != 'iso3') {
-                  var i = Object.keys(idx).indexOf(key);
-                  if (i < 6) {
-                    left.append('p')
-                      .text(key + ': ' + idx[key]);
-                  } else {
-                    right.append('p')
-                      .text(key + ' ' + idx[key]);
-                  }
-                }
-              }
-            } else {d3.select('div.tooltip').classed('hidden', true);}
+            holder.classed('invisible', false);
+
+            holder.select('.country-name')
+              .text(idx.country);
+
+            holder.select('.country-score')
+              .text(idx.val);
+
+            holder.select('.units')
+              .text(' units!');
+
+
 
 
 

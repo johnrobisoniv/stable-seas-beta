@@ -254,12 +254,27 @@ nav {
   margin-left: 47%;
 }
 #map-menu-wrapper h1 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 #tooltip-below-menu {
-  height: 50px;
   margin-top: 15px;
+}
+
+#tooltip-below-menu.muted {
+  color: #b3b3b3;
+}
+
+#tooltip-below-menu p {
+  margin: 0px;
+}
+
+.country-score {
+  font-size: 18px;
+}
+
+.units {
+  font-size: 18px;
 }
 
 .nav li {
