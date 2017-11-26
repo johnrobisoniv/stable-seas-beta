@@ -97,12 +97,12 @@
     // Promises, I hope I never break em
 
     // Add a few sheets and js files
-    $('head').append('<link href="../css/fancybox.css" rel="stylesheet">');
+    $('head').append('<link href="../../css/fancybox.css" rel="stylesheet">');
     $('body').append('<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>');
 
   if (width > 1199 || window.navigator.userAgent.indexOf('MSIE') != -1) {
 
-    buildMap('../data/map-layer.js')
+    buildMap('../../data/map-layer.js')
       .then(function (resolution) {
         // console.log(resolution);
         // If buildMap() resolves, execute:
@@ -268,7 +268,7 @@ $('#content-holder').on('click', '.table-expand', function () {
 
           var regionsLink = regionsMainNav.append('a')
             .attr('href', function () {
-              return '../regions/' + regionsPath;
+              return './' + regionsPath;
             });
 
           var regionsDiv = regionsLink.append('div')
@@ -368,7 +368,7 @@ $('#content-holder').on('click', '.table-expand', function () {
             d3.select('#map-menu')
               .append('a')
                 .attr('href', function () {
-                  return './' + key;
+                  return './' + md.path;
                 })
                 .classed(key, true)
                 .on('mouseenter', function () {
