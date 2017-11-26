@@ -170,25 +170,25 @@ nav {
 
   /* And for Issue Area nav */
 
-.ia {
+.regions {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.ia:hover {
+.regions:hover {
   transition: all 0s;
 
   opacity: 0.7;
 }
 
-.ia-nav {
+.regions-nav {
   height: 50px;
 
 
 }
-.ia-btn {
+.regions-btn {
   height: 50px;
   display: table;
   cursor: pointer;
@@ -196,21 +196,21 @@ nav {
   border-right: 1px solid white;
 }
 
-.ia-btn:nth-child(0) {
+.regions-btn:nth-child(0) {
   border-left: 2px solid white;
 }
 
 
-.ia-btn:nth-child(n) {
+.regions-btn:nth-child(n) {
   border-right: 2px solid white;
 }
 
-.ia-btn:hover {
+.regions-btn:hover {
 
 }
 
 
-.ia-btn p {
+.regions-btn p {
   font-family: 'Open Sans 500', sans-serif;
   font-size: 13px;
   text-align: center;
@@ -219,7 +219,7 @@ nav {
   display: table-cell;
   vertical-align: middle;
 }
-.ia-buffer {
+.regions-buffer {
   height: 50px;
   background-color: #0d3a58;
 }
@@ -251,19 +251,84 @@ nav {
 }
 
 .nav li {
-  background-color: whitesmoke;
 }
 .nav li:hover {
   background-color: lightgrey;
 }
 
-.nav #feedback-button {
-  background-color: #0c3b59;
-  /*margin: 5px 0px 0px 25px;*/
+.nav-toggle {
+  height: 50px;
+  width: 200px;
+  background-color: whitesmoke;
+  float: right;
+  right: 10%;
+}
+
+.views {
+  text-align: center;
+}
+.nav-toggle .current-view {
+  background-color: #0c3b58;
+  /*width: 40%;*/
+  margin: 5px;
   height: 40px;
-  margin-top: 5px;
   color: white;
 }
+
+
+.current-view p {
+  margin: 9px auto;
+}
+
+.other-view p {
+  margin: 6px auto;
+  kerning: 0;
+  line-height: 1;
+}
+
+.nav-toggle .other-view {
+  background-color: none;
+  width: 40%;
+  margin: 5px;
+  height: 40px;
+  color: grey;
+}
+
+.nav-toggle .other-view:hover {
+  background-color: #0c3b58;
+  color: white;
+}
+
+/*.nav .toggle-button  {
+  background-color: #0c3b59;
+  height: 40px;
+  color: white;
+}
+
+.nav .view-link {
+  background-color: lightgreen;
+  height: 80%;
+  width: 80%;
+  margin: 4px auto;
+  text-align: center;
+}
+
+.nav .view-link.active {
+  background-color: green;
+}
+
+
+.nav a.active {
+  color: black;
+}
+
+.toggle-button {
+
+}
+
+.toggle-button .active {
+
+}*/
 
 #feedback-link {
   color: white;
@@ -580,7 +645,7 @@ tr.pulse {
 
 }
 .pulse.country {
-  fill: #FC4C02;
+  fill: #FC4C02 !important;
 }
 
 
@@ -751,12 +816,12 @@ footer {
   mask: url(#mask-stripe);
 }*/
 
-/* ia1c3 - Overview: Yaounde */
+/* regions1c3 - Overview: Yaounde */
 .yaounde {
 
 }
 
-/* ia2c2 - International Cooperation: Maritime Disputes */
+/* regions2c2 - International Cooperation: Maritime Disputes */
 .maritime-dispute {
   fill-opacity: 0;
   stroke-width: 3px;
@@ -971,22 +1036,22 @@ div.navy-and-maritime-law-enforcement {
 }
 
 
-.ia10c1-1 {
+.regions10c1-1 {
   background-color: #a6cee3;
 }
 
-.ia10c1-2 {
+.regions10c1-2 {
   background-color: #b2df8a;
 }
-.ia10c1-3 {
+.regions10c1-3 {
   background-color: #fb9a99;
 }
 
-.ia10c1-4 {
+.regions10c1-4 {
   background-color: #fdbf6f;
 }
 
-.ia10c1-5 {
+.regions10c1-5 {
   background-color: #cab2d6;
 }
 
