@@ -1,10 +1,10 @@
 // STABLE Seas
-  // ONE EARTH FUTUREee
+  // ONE EARTH FUTURE
   // v0.0.6
 
 // Define global variables
   // Issue Area
-  var iaIndex = issueAreaData[issueArea].metadata.index;
+  var regionsIndex = regionsData[region].metadata.index;
 
   // Card
   var cIndex;
@@ -14,8 +14,9 @@
   // Color variables
   // var colorBrew = d3.scaleOrdinal(d3.schemeCategory20);// I don't think we need this any more...
   var colorBrew = [['#a6cee3', '#1f78b4'],['#b2df8a', '#33a02c'],['#fb9a99', '#e31a1c'],['#fdbf6f', '#ff7f00'], ['#cab2d6', '#6a3d9a']];
-  var iaColorSelection = issueAreaData[issueArea].metadata.color;
-  var rampColor = d3.interpolateLab('white', iaColorSelection);
+  var regionsColor = d3.schemeCategory10;
+  var regionsColorSelection = regionsColor[regionsData[region].metadata.index];
+  var rampColor = d3.interpolateLab('white', regionsColorSelection);
 
   // Map variables
   var width = $(window).width(),
@@ -69,22 +70,16 @@
 
   // Set up the tooltip:
   var tooltip = d3.select('body').append('div')
-      .attr('class', 'hidden tooltip col-sm-1');
+      .attr('class', 'hidden tooltip col-lg-2');
 
       tooltip.append('h1');
       var tooltipRow = tooltip.append('div')
-        .classed('row tooltip-body', true);
+        .classed('row', true);
 
-      tooltipRow.append('span')
-        .classed('country-score', true);
-
-      tooltipRow.append('span')
-        .classed('units', true);
-
-      // tooltipRow.append('div')
-      //   .classed('col-lg-6 left', true);
-      // tooltipRow.append('div')
-      //   .classed('col-lg-6 right', true);
+      tooltipRow.append('div')
+        .classed('col-lg-6 left', true);
+      tooltipRow.append('div')
+        .classed('col-lg-6 right', true);
       // tooltip.append('svg')
       //   .classed('tool', true);
 
@@ -111,13 +106,13 @@
       .then(function (resolution) {
         // console.log(resolution);
         // If buildMap() resolves, execute:
-        return loadIA(issueAreaData, activeCard); // returns loadIA promise
+        return loadRegions(regionsData, activeCard); // returns loadRegions promise
       }).then(function (resolution) {
-        // console.log(resolution);
-        setTimeout(switchCard(activeCard), 500);
+         console.log(resolution);
+        setTimeout(switchCard(activeCard), 1000);
       })
       .catch(function (error){
-        // console.log(error);
+         console.log(error);
       });
 
   } else {  // redirect to PDF if on a small screen !
@@ -135,7 +130,7 @@
 
 // Ad hoc elements - ### Add these to templates !
 
-$('#resources-menu').prepend('<li><a href="../../stable-seas-executive-brief.pdf" target="_blank">Executive Summary</a></li>');
+$('#resources-menu').prepend('<li><a href="../stable-seas-executive-brief.pdf" target="_blank">Executive Summary</a></li>');
 
 
 // 3 Event listeners
@@ -165,7 +160,7 @@ $('#map-svg').on('mouseleave','.stableseas', function () {
 // Window Resize:
 $(window).resize( function () {
 	if ($(window).width() < 1200) {
-    console.log('what!?');
+  //  console.log('what!?');
     $('#resizeModal').modal('show');
   }
 });
@@ -215,40 +210,30 @@ $('#content-holder').on('click', '.table-expand', function () {
 
 });
 
-function clearTooltip () {
-  var ttip = d3.select('#tooltip-below-menu');
-
-  ttip.select('.country-name')
-    .classed('muted', true)
-    .text('Country');
-
-  ttip.select('.country-score')
-    .classed('muted', true)
-    .text('Score /')
-  ttip.select('.units')
-    .classed('muted',true)
-    .text(' units');
-}
-
 
 // 4 Functions
-  // Master IA load function
-  function loadIA (data, card) {  // where data = data.js format ... so it's an object set as a variable? Or array of objects?
+  // Master Regions load function
+  function loadRegions (data, card) {  // where data = data.js format ... so it's an object set as a variable? Or array of objects?
     return new Promise (function(resolve, reject) {
 
       // Set title
       d3.select('title')
-        .text(function () { return issueAreaData[issueArea].metadata.name + ' | Stable Seas Africa'})
+        .text(function () { return regionsData[region].metadata.name + ' | Stable Seas Africa'})
 
       d3.select('head')
         .append('meta')
         .attr('name', 'description')
-        .attr('content', issueAreaData[issueArea].metadata.description);
+        .attr('content', regionsData[region].metadata.description);
 
       d3.select('.navbar-brand')
         .attr('href', '../overview');
       // Color main ia nav ribbon:
-      // console.log(iaNav);
+      // console.log(regionsNav);
+
+      // d3.select('.nav-toggle')
+      //   .style('background', function () {
+      //     return d3.interpolateLab('white', '#0c3b58')(0.2);
+      //   });
 
       $('head').append('<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107179985-1"></script>');
 
@@ -259,104 +244,88 @@ function clearTooltip () {
       $('footer .container').empty();
       $('footer .container').append("<p class=\"text-muted\">Stable Seas is a project of <a target='_blank' href='http://oneearthfuture.org/'>One Earth Future</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To learn more contact Curtis Bell, project lead, at <a href=\"mailto:info@oneearthfuture.org\" target=\"_blank\">info@oneearthfuture.org</a>.<span id='social'><a href='https://www.facebook.com/oneearthfuture/' target=\"+_blank\"><i class='fa fa-facebook'></i></a>&nbsp;&nbsp;<a href='https://twitter.com/oeforg' target=\"_blank\"><i class='fa fa-twitter'></i></a>&nbsp;&nbsp;<a href='https://www.youtube.com/user/OEFResearch'><i class='fa fa-youtube'></i></a>&nbsp;&nbsp;<a href='https://twitter.com/hashtag/StableSeas' target=\"_blank\"><i class='fa fa-hashtag'></i></a></span> </p>");
 
-      var iaNav = $('.ia-btn');
+      var regionsNav = $('.regions-btn');
       $('.menu-navigation-p').remove();
 
-      // for (var ia in issueAreaData) {
-      //   var metadata = issueAreaData[ia].metadata;
-      //   var slot = metadata.index;
-      //
-      //   iaNav[index].attr('id', function () {
-      //     console.log('heyoooooo');
-      //     return 'ia-' + metadata.code;
-      //   });
-      //
-      //
-      // }
+      var regionsMainNav = d3.select('#regions-main-nav');
 
-      // for (var i = 0; i < iaNav.length; i++) {
-      //
-      //   var currentIssueArea = iaNav[i].getAttribute('id').substring(3);
-      //     console.log(currentIssueArea);
-      //
-      //   d3.select(iaNav[i])
-      //     .transition()
-      //     .delay(i * 100)
-      //     .style('background-color', function () {
-      //       return issueAreaData[currentIssueArea].metadata.color;  // ### this needs to be fixed.
-      //     });
-      // }
+      regionsMainNav.append('div')
+        .classed('regions regions-buffer col-lg-1', true);
 
-      var iaMainNav = d3.select('#ia-main-nav');
+      var counter = 0;
+      for (regionTmp in regionsData) {
 
-      iaMainNav.append('div')
-        .classed('ia ia-buffer col-lg-1', true);
+          var metadata = regionsData[regionTmp].metadata;
+          var index = metadata.index;
+        //  console.log(index);
+          var regionsPath = metadata.path;
+          var regionsCode = metadata.code;
 
+          // #### not sure why this isn't working
 
-      for (ia in issueAreaData) {
-  //      if (ia != 'overview') { ### this should have added the Overview button, but maybe not...
-      //    var i = 20;
-          var metadata = issueAreaData[ia].metadata;
-          var index = metadata.index - 1;
-          var iaPath = metadata.path;
-          var iaCode = metadata.code;
-          var iaColor = metadata.color;
-          var iaText = metadata.name;
+          //          var regionsColor = metadata.color;
+          var regionsText = metadata.name;
 
-          var iaLink = iaMainNav.append('a')
+          var regionsLink = regionsMainNav.append('a')
             .attr('href', function () {
-              return '../issue-areas/' + iaPath;
+              return './' + regionsPath;
             });
 
-          var iaDiv = iaLink.append('div')
-            .attr('id', function () { return 'ia-' + iaCode; })
-            .classed('ia ia-btn col-xs-1', true)
-          //  .transition().delay(i )  // ### can we figure out how to get the animated nav reveal again?
-            .style('background-color', iaColor);
+          var regionsDiv = regionsLink.append('div')
+            .attr('id', function () { return 'regions-' + regionsCode; })
+            .classed('regions regions-btn col-lg-2-ss', true)
+            .style('background-color', regionsColor[index] );
 
-          iaDiv.append('p')
-            .text(iaText);
+          regionsDiv.append('p')
+            .text(regionsText);
 
-        //  i += 20;
-    //    }
       }
 
-      iaMainNav.append('div')
-        .classed('ia ia-buffer col-xs-1', true);
-
-
-
+      regionsMainNav.append('div')
+        .classed('regions regions-buffer col-lg-1', true);
 
       // Pull target card index from URL anchor:
       var hash = window.location.hash;
       if (hash) {
         hash = parseInt(hash.substring(1));
-        if (Math.floor(hash) == hash && $.isNumeric(hash) && hash < issueAreaData[issueArea].cards.length) {
+        if (Math.floor(hash) == hash && $.isNumeric(hash) && hash < regionsData[region].cards.length) {
           activeCard = hash;
         }
       }
 
       // Load page-level data:
-      issueAreaData[issueArea].load(issueAreaData[issueArea].metadata.csv, function (result) {
+      regionsData[region].load(regionsData[region].metadata.csv, function (result) {
 
         // Loop through cards:
-        var cards = issueAreaData[issueArea].cards; // Array of card objects
+        var metadata = regionsData[region].metadata;
+        var index = metadata.index;
+        var regionalCountries = metadata.regionalCountries;
 
+        regionalCountries.forEach(function (iso3) {
+          d3.selectAll('.country.' + iso3)
+            .style('fill', function () {return rampColor(0.5); })
+            .style('stroke', function () {return rampColor(1);});
+
+          d3.selectAll('.eez.' + iso3)
+            .style('stroke', function () {return regionsColor[index]; });
+        });
+
+        var cards = regionsData[region].cards; // Array of card objects
         cards.forEach( function (card, cardIndex) {  // don't use single letter variables!!!!
           cIndex = cardIndex;
           // Set up for selector
           var constructionCard = 'card' + cardIndex;
-
-          d3.select('#map-menu')
-            .append('div')
-            .attr('id', function () {return 'card-' + cardIndex + '-menu'})
-            .attr('data-card', cardIndex)
-            .attr('class',  'switch')
-              .text(function () {
-                return cardIndex == 0 ? card.menu : cardIndex + ' ' + card.menu;
-               })
-            .on('click', function () { switchCard(parseInt(this.getAttribute('data-card'))); }); // ### click handler menu item ...
-
+          if (region != 'overview') {
+            d3.select('#map-menu')
+              .append('div')
+              .attr('id', function () {return 'card-' + cardIndex + '-menu'})
+              .attr('data-card', cardIndex)
+              .attr('class',  'switch')
+                .text(function () {
+                  return card.menu;
+                 })
+              .on('click', function () { switchCard(parseInt(this.getAttribute('data-card'))); }); // ### click handler menu item ...
+          }
 
           // Load map data...
           var mapDataPath = card.map.path;
@@ -372,7 +341,7 @@ function clearTooltip () {
           if (cardIndex != 0) {
             cardUnderConstruction
               .append('h4')
-                .text(issueAreaData[issueArea].metadata.name)
+                .text(regionsData[region].metadata.name)
                 .classed('card-header', true);
           }
 
@@ -383,25 +352,55 @@ function clearTooltip () {
             buildEl(el, constructionCard, cardIndex, elIndex);
           }); // End els loop
 
-          for (ia in issueAreaData) {
-            d3.selectAll('.inline.' + issueAreaData[ia].metadata.path)
+          for (regions in regionsData) {
+            d3.selectAll('.inline.' + regionsData[regions].metadata.path)
               .style('background-color', function () {
-                return d3.interpolateLab('white', issueAreaData[ia].metadata.color)(0.2);
+                return d3.interpolateLab('white', regionsData[regions].metadata.color)(0.2);
               });
           }
 
         });
 
-        $('#ia-maritimeMixedMigration')
-          .parent()
-          .attr('href','../issue-areas/maritime-mixed-migration');
+        // Build overview menu with direct links to Regions pages
+        if (region == 'overview') {
+          for (key in regionsData) {
+            var md = regionsData[key].metadata;
+            d3.select('#map-menu')
+              .append('a')
+                .attr('href', function () {
+                  return './' + md.path;
+                })
+                .classed(key, true)
+                .on('mouseenter', function () {
+
+                  pulseRegion(this.getAttribute('class'));
+                })
+                .on('mouseleave', function () {
+                  unpulseRegion(this.getAttribute('class'));
+                })
+              .append('div')
+              .classed('switch ' + key, true)
+              .classed('active', function () {
+                if (key == 'overview') {
+                  return true;
+                } else {
+                  return false;
+                }
+              })
+              .text(md.name);
+              //.append('div')
+          }
+
+
+        }
 
         buildModals();
 
-        setTimeout(function (){resolve('loadIA resolved');}, 0);
+        setTimeout(function (){resolve('loadRegions resolved');}, 0);
       });
    }); // end of Promise
 }
+
 
 // Build Modals:
   function buildModals () {
@@ -451,6 +450,8 @@ function buildEl (obj, container, cardIndex, elIndex) {  // Function to build el
       d3.select('#'+container)
         .append('hr');
       break;
+    // case 'radar' :
+    //   buildRadar(obj, container, cardIndex, elIndex);
     case 'indexTable' :
       buildIndexTable(obj, container, cardIndex, elIndex)
       break;
@@ -693,11 +694,11 @@ function buildCaption (obj, container, cardIndex, elIndex) {
     // the rest is going to be custom - right?
 
 function buildIndexTable ( obj, container, cardIndex, elIndex ) {
-  // Set variable equal to data pulled in from CSV in issueAreaData[issueArea].load();
-  var metadata = issueAreaData[issueArea].metadata;
+  // Set variable equal to data pulled in from CSV in regionsData[region].load();
+  var metadata = regionsData[region].metadata;
   var order = metadata.order;
   var tableData = metadata.countryData;
-  var csvSelector = 'ia' + metadata.index + 'c' + cardIndex;
+  var csvSelector = 'regions' + metadata.index + 'c' + cardIndex;
 
   tableData = tableData.sort(function(x, y){
     return d3.descending(x[csvSelector], y[csvSelector]); // ### This needs to be refactored as x[cardCol], y[cardCol]
@@ -764,11 +765,10 @@ function buildIndexTable ( obj, container, cardIndex, elIndex ) {
 
 
 function buildOverviewIndexTable ( obj, container, cardIndex, elIndex ) {
-  // Set variable equal to data pulled in from CSV in issueAreaData[issueArea].load();
-  var metadata = issueAreaData[issueArea].metadata;
+  // Set variable equal to data pulled in from CSV in regionsData[region].load();
+  var metadata = regionsData[region].metadata;
   var order = metadata.order;
   var tableData = metadata.countryData;
-//  var csvSelector = 'ia' + metadata.index + 'c' + cardIndex;
 
   tableData = tableData.sort(function(x, y){
     return d3.ascending(x['country'], y['country']); // ### This needs to be refactored as x[cardCol], y[cardCol]
@@ -813,7 +813,7 @@ function buildOverviewIndexTable ( obj, container, cardIndex, elIndex ) {
   //  .classed('')  // This is where we put in the 3-digit ISO codes
     .text(function (d) {return d.country})
     .style('border-left', function (d, i) {
-      return '25px solid ' + issueAreaData[d[col]].metadata.color;
+      return '25px solid ' + regionsData[d[col]].metadata.color;
       // if (metadata.order == -1) {
       //   return '30px solid ' + rampColor( 1 - ( ( d[csvSelector] - tableMin ) / ( tableMax - tableMin ) ) );
       // } else {
@@ -824,7 +824,7 @@ function buildOverviewIndexTable ( obj, container, cardIndex, elIndex ) {
     });
 
     trow.append('td')
-    .text(function (d) { return issueAreaData[d[col]].metadata.name;});
+    .text(function (d) { return regionsData[d[col]].metadata.name;});
 
   d3.selectAll('.hid')
     .style('display', 'none');
@@ -846,6 +846,33 @@ function pulse (iso3) {
 
   d3.selectAll(a)
     .classed('pulse', true);
+}
+
+function pulseRegion (classed) {
+  console.log(classed);
+  var md = regionsData[classed].metadata;
+  d3.selectAll('.country.' + classed)
+    .style('fill', function () {
+      return d3.interpolateLab('white', regionsColor[md.index])(1);
+    });
+  d3.selectAll('.eez.' + classed)
+    .style('fill', function () {
+      return d3.interpolateLab('white', regionsColor[md.index])(0.2);
+    });
+
+}
+
+function unpulseRegion (classed) {
+  var md = regionsData[classed].metadata;
+
+  d3.selectAll('.country.' + classed)
+    .style('fill', function () {
+      return d3.interpolateLab('white', regionsColor[md.index])(0.6);
+    });
+
+  d3.selectAll('.eez.'  + classed)
+    .style('stroke', regionsColor[md.index])
+    .style('fill', null);
 }
 
 function unpulse () {
@@ -900,10 +927,24 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
               .classed('invisible', true);
           })
           .on('click', function (d) {
+            console.log(d3.geoBounds(d));
+
+          //  console.log(d);
+          //  console.log(path.bounds(d));
           });
+        // .on('mouseenter', pulse)
+        // .on('mousemove', function(d) {
+        //     var mouse = d3.mouse(map.node()).map(function(d) {  // map. ???
+        //         return parseInt(d);
+        //     })
+        //   })
+        // .on('mouseout', function() {
+        //     unpulse();
+        // });
 
 
       // Countries
+
       var countries = topojson.feature(geoData, geoData.objects.countries).features,
           neighbors = topojson.neighbors(geoData.objects.countries.geometries);
 
@@ -916,7 +957,7 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           .data(countries)
         .enter().insert("path", ".graticule")
           .attr('class', function (d) {
-            if (d.properties.NAME == 'France') {console.log(d);}
+        //    if (d.properties.NAME == 'France') {console.log(d);}
             if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
               return d.properties.ISO_A3_EH + ' country in';
             } else if (d.properties.ISO_A3_EH == 'ATA') {
@@ -930,7 +971,7 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           .attr("d", path)
           .attr('title', function (d) {
             //console.log(d);
-            console.log( d.properties.SOVEREIGNT);
+        //    console.log( d.properties.SOVEREIGNT);
 
               return d.properties.SOVEREIGNT;
 
@@ -938,56 +979,68 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           })
           .on('mouseenter', function (d) {
             //console.log(d);
-
-            if (issueAreaData[issueArea].cards[activeCard].map.tooltip) {
-
-
-
-              if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
-                var coords = path.bounds(d);
-                var tooltip = d3.select('div.tooltip');
-                console.log(coords);
-
-                tooltip.style('left', function () {
-                  var x = coords[0][0];
-                  console.log(x);
-                  return x + 'px';
-                  })
-                  .style('top', function () {
-                    var y = coords[0][1] + 40;
-                    console.log(y)
-                    return y  + 'px';})
-                  .classed('hidden', false);
-
-                var idx = issueAreaData[issueArea].metadata.indexData
-                  .filter(  function( obj ) {
-                    return obj.iso3 == d.properties.ISO_A3_EH;
-                  })[0];
-                // console.log(idx);
-
-                tooltip.select('h1')
-                  .text(idx.country);
-
-                var tooltipBody = tooltip.select('.tooltip-body');
-                //var left = d3.select('.left').html('');
-              //  var right = d3.select('.right').html('');
-
-              tooltipBody.select('.country-score').text(idx.val);
-              tooltipBody.select('.units').text(' units');
-
-
-            }
-          } else {
-          //  console.log(d.properties.ISO_)
-            d3.selectAll('.label.' + d.properties.ISO_A3_EH)
+            d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', false);
-          //  console.log(d);
-          }
           })
           .on('mouseout', function (d) {
             d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', true);
-            d3.select('div.tooltip').classed('hidden', true);
+          })
+          .on('click', function (d) {
+
+            console.log(d3.geoBounds(d));
+
+          //   if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
+          //     var coords = path.bounds(d);
+          //     var tooltip = d3.select('div.tooltip');
+          //
+          //     tooltip.style('left', function () {return coords[0][0] - 100 + 'px';})
+          //       .style('top', function () {return coords[0][1] - 90 + 'px';})
+          //       .classed('hidden', false);
+          //
+          //     var idx = regionsData.overview.metadata.indexData
+          //       .filter(  function( obj ) {
+          //         return obj.iso3 == d.properties.ISO_A3_EH;
+          //       })[0];
+          //
+          //     tooltip.select('h1')
+          //       .text(idx.country);
+          //     var left = d3.select('.left').html('');
+          //     var right = d3.select('.right').html('');
+          //
+          // //    console.log(idx);
+          //     for (var key in idx) {
+          //       if (key != 'country' && key != 'iso3') {
+          //         var i = Object.keys(idx).indexOf(key);
+          //         if (i < 6) {
+          //           left.append('p')
+          //             .text(key + ': ' + idx[key]);
+          //         } else {
+          //           right.append('p')
+          //             .text(key + ' ' + idx[key]);
+          //         }
+          //       }
+          //     }
+          //   } else {d3.select('div.tooltip').classed('hidden', true);}
+
+
+
+
+              // Once we want to get the svg D3 graphic in, start here:
+            // var svgTool = d3.select('svg.tool'),
+            //   margin = {top: 20, right: 20, bottom: 30, left: 40},
+            //   width = +svg.attr('width'),
+            //   height = +svg.attr('height');
+            //
+            // var x = d3.scaleBand().rangeRound([0, width]),
+            //   y = d3.scaleBand().rangeRound([height,0]);
+            //
+            // var g = svg.append("g")
+            //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            //console.log(idx);
+
+
           });
 
           var wSaharaCoords = [[-8.67, 27.67],[-13.17,27.67]];
@@ -998,6 +1051,28 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
             .attr('y2', function () { return projection(wSaharaCoords[1])[1]; })
             .attr('stroke-dasharray', '2,2')
             .classed('w-sahara-line', true);
+
+          // The OLD Tooltip Code... this didn't work.
+        // .on('mousemove', function(d) {    // ### We should only be attaching this event listener to .included countries!!
+        //     var mouse = d3.mouse(map.node()).map(function(d) {
+        //         return parseInt(d);
+        //     });
+        //     // console.log(d);
+        //     tooltip.classed('hidden', false)
+        //         .attr('transform', function (d) {
+        //   //        console.log(d);
+        //           //return 'translate(' + path.centroid(d) + ')';
+        //         })
+        //         // .attr('style', 'left:' + (mouse[0]) +
+        //         //         'px; top:' + (mouse[1] + 5) + 'px')
+        //         .html(function () {
+        //     //      console.log(d);
+        //           return d.properties.NAME;
+        //         });
+        // })
+        // .on('mouseout', function() {
+        //     tooltip.classed('hidden', true);
+        // });
 
         labels.selectAll('.label')
           .data(countries).enter()
@@ -1029,7 +1104,6 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
     });
   }) // end of Promise
 }
-
 
 // Interactivity functions
 function switchCard ( target ) {
@@ -1065,7 +1139,7 @@ function switchCard ( target ) {
 
   window.scrollTo(0,0);   // do we want the toolbar to expand if they haven't hovered on it or scrolled up? Kinda no...
 
-  var mapObj = issueAreaData[issueArea].cards[target].map;
+  var mapObj = regionsData[region].cards[target].map;
 
   d3.selectAll('.card-' + target + '-layer')
     .classed('invisible', false);
@@ -1078,19 +1152,40 @@ function switchCard ( target ) {
   // And highlight the relevant countries:
   d3.selectAll('.on').classed('on',false);
   // ### Then loop through cards[i].map.highlights,
-  var highlights = issueAreaData[issueArea].cards[target].map.highlights;
+
+  var metadata = regionsData[region].metadata;
+  var index = metadata.index;
+  var regionalCountries = metadata.regionalCountries;
+
+  regionalCountries.forEach(function (iso3) {
+    d3.selectAll('.country.' + iso3)
+      .style('fill', function () {return rampColor(0.5); })
+      .style('stroke', function () {return rampColor(1);});
+
+    d3.selectAll('.eez.' + iso3)
+      .style('stroke', function () {return regionsColor[index]; });
+  });
+
+  var highlights = regionsData[region].cards[target].map.highlights;
   if (highlights) {
     highlights.forEach(function (highlight, i) {
-      d3.selectAll('.' + highlight)
+      d3.selectAll('.country.' + highlight)
         .classed('active', true)
         .transition().delay(10 * i)
         .style('fill', function () {
-          return rampColor(0.5);
-        })
-        .style('stroke', function () {
           return rampColor(1);
-        });
+        })
+        .style('stroke', 'grey');
         //.classed('on', true);
+
+      d3.selectAll('.eez.' + highlight)
+        .classed('active', true)
+        .transition().delay(10 * i)
+        .style('fill', function () {
+          return rampColor(0.2);
+        })
+        .style('stroke', 'grey');
+
 
     })
   }
@@ -1100,7 +1195,7 @@ function switchCard ( target ) {
     .style('background-color', function () { return rampColor(0.3);})
     .style('border-left', function () { return '5px solid ' + rampColor(1);});
 
-  var cardMapObj = issueAreaData[issueArea].cards[target].map;
+  var cardMapObj = regionsData[region].cards[target].map;
   cardMapObj.extent ? zoom(cardMapObj.extent) : reset();
 
   activeCard = target;
@@ -1130,12 +1225,12 @@ function switchMainIndex(cardIndex) {
   if (!cardIndex) {cardIndex = 0;}
 
   var target = 'card-'+cardIndex+'-layer';
-  var metadata = issueAreaData[issueArea].metadata;
+  var metadata = regionsData[region].metadata;
   var vals = metadata.countryData;
   var valsArr = []
-  var csvSelector = 'ia'+ metadata.index + 'c' + cardIndex;
+  var csvSelector = 'regions'+ metadata.index + 'c' + cardIndex;
   vals.forEach(function (d){
-    valsArr.push(d[csvSelector]);  // again, must use iaIndex and index
+    valsArr.push(d[csvSelector]);  // again, must use regionsIndex and index
   })
 
   var max = d3.max(valsArr);
@@ -1159,10 +1254,10 @@ function switchMainIndex(cardIndex) {
 
 function switchMainIndexInverse (cardIndex) {
   var target = 'card-'+cardIndex+'-layer';
-  var metadata = issueAreaData[issueArea].metadata;
+  var metadata = regionsData[region].metadata;
   var vals = metadata.countryData;
   var valsArr = []
-  var csvSelector = 'ia'+ metadata.index + 'c' + cardIndex;
+  var csvSelector = 'regions'+ metadata.index + 'c' + cardIndex;
 
   vals.forEach(function (d){
     valsArr.push(d[csvSelector]);
@@ -1210,12 +1305,16 @@ function zoom (coordinates) { // Where coordinates is 2D array of UR and LL coor
     y = (bounds[0][1] + bounds[1][1]) / 2,
     scale = .9 / Math.max(dx / width, dy / height),
     translate = [width / 2 - scale * x, height / 2 - scale * y];
+  //  console.log(scale);
+  //  console.log(translate);
 
   mapg.transition()
     .duration(750)
     .style("stroke-width", 1.5 / scale + "px")
     .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
 
+  d3.selectAll('.label')
+    .style('font-size', scale);
 }
 
 function reset () {
@@ -1223,6 +1322,9 @@ function reset () {
     .duration(750)
     .style("stroke-width", null)
     .attr("transform", "");
+
+  d3.selectAll('.label')
+    .style('font-size', '18px');
 }
 
 
@@ -1230,24 +1332,24 @@ function reset () {
 
 function init() {
   window.addEventListener('scroll', function(e) {
-    var ia = d3.selectAll('.ia'),
+    var regions = d3.selectAll('.regions'),
       distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 30;
 
     if (distanceY > shrinkOn) {
-      ia.selectAll('p')
+      regions.selectAll('p')
         .classed('invisible',true);
-      ia.classed('small',true);
-      d3.select('#map-menu-wrapper')
+      regions.classed('small',true);
+      d3.select('#map-menu')
         .transition()
         .style('margin-top', '30px');
     } else {
-      d3.select('#map-menu-wrapper')
+      d3.select('#map-menu')
         .transition()
         .style('margin-top', '70px');
 
-      ia.classed('small', false);
-      ia.selectAll('p').classed('invisible',false);
+      regions.classed('small', false);
+      regions.selectAll('p').classed('invisible',false);
     }
   });
 }
@@ -1265,16 +1367,16 @@ function closeNav() {
 }
 
 d3.select('nav').on('mouseenter', function () {
-  var ia = d3.selectAll('.ia'),
+  var regions = d3.selectAll('.regions'),
     distanceY = window.pageYOffset || document.documentElement.scrollTop,
     shrinkOn = 30;
 
-  d3.select('#map-menu-wrapper')
+  d3.select('#map-menu')
     .transition()
     .style('margin-top', '70px');
 
-  ia.selectAll('p')
+  regions.selectAll('p')
     .classed('invisible',false);
 
-  ia.classed('small', false);
+  regions.classed('small', false);
 });

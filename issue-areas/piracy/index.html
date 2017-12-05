@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../assets/favicon.ico">
+
+    <title>Stable Seas Africa | Maritime Security Index</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap-ss.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <link href="../../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="../../css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- Social Icons CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- And for modal video -->
+    <link rel="stylesheet" href="../../css/modal-video.min.css">
+
+
+
+    <!-- Load D3.js & co -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <!-- TopoJSON.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.0/topojson.js'></script>
+
+
+    <!-- Load card / els data -->
+    <script src='../../data/main-data.js'></script>
+
+    <!-- Page-specific variables: -->
+    <script>
+      var issueArea = 'piracy';
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Nunito+Sans:200,600|Open+Sans:300,500|Lato" rel="stylesheet">
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- <script src="../../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class='issue-areas-body'>
+    <!-- Temporary modal to explain lack of meta-interactivity -->
+    <div class="modal fade" id="iaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Under Construction</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thanks so much for exploring our interface.<br><br>
+            On the final site clicking these Issue Area links will take you to other pages similar to this one, with a map and information about that issue area. <br><br>For now, just explore this page.
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Under Construction</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thanks so much for exploring our interface.<br><br>
+            On the final site clicking these Country links will take you to country-specifica pages where you can get country-level information and analysis. <br><br>For now, just explore this page.
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="landing-screen" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content text-center row">
+        <img id='stableseas-intro-logo' src="../../assets/stable_seas_intro_logo.png" />
+        <div class="overlay-small">
+        <p class=""><em>Developed by OEF Research, Oceans Beyond Piracy, and Secure Fisheries, programs of</em></p>
+        </div>
+        <img id="one-earth-intro-logo" src="../../assets/stable_seas_intro_oef_logo.png" />
+        <p class='uppercase'>Welcome to the Stable Seas Maritime Security Index</p>
+        <div class='overlay-small'>
+        <p><em>This index is an on-going collaborative resource. <br />
+          We welcome feedback from maritime stakeholders closest to the issues to expand upon this initial version.</em></p>
+        </div>
+          <a href="javascript:void(0)" class="" onclick="closeNav()"><div id="ss-close-btn" class="col-lg-2 col-lg-offset-5"><p>Continue to stableseas.org</p></div></a>
+      </div>
+
+    </div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img id='logo' src='../../assets/logo-index.png' /></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul id='nav-menu' class="nav navbar-nav">
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Issue Areas <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Rule of Law</a></li>
+                <li><a href="#">Blue Economy</a></li>
+                <li><a href="#">Illicit Economic Activity</a></li>
+              </ul>
+            </li> -->
+            <li class='zone-li issue-areas-zone'>
+              <a id='issue-areas-link' class='zone-link' href="#" target="_blank">Issue Areas</a>
+            </li>
+            <li  class='zone-li regions-zone'>
+              <a id='regions-link' class='zone-link' href="../../regions/overview" target="_blank">Regions</a>
+            </li>
+            <li id='resources-dropdown' class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+              <ul id='resources-menu' class="dropdown-menu">
+                <li><a href="http://oceansbeyondpiracy.org/" target="_blank">Oceans Beyond Piracy</a></li>
+                <li><a href="http://securefisheries.org/" target="_blank">Secure Fisheries</a></li>
+                <li><a href="http://oefresearch.org/" target="_blank">OEF Research</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- <button type="button" class="btn cta btn-primary">Primary</button> -->
+
+        </div><!--/.nav-collapse -->
+
+      </div>
+      <div id='ia-main-nav' class='row'>
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+      <div id='holder' class="container-fluid">
+        <div id='tiles'></div>
+        <svg id='map-svg'></svg>
+        <div class='bgimg col-lg-7 col-lg-offset-1 invisible'>
+          <img class='img-responsive' />
+        </div>
+        <div id='map-menu-wrapper' class='col-lg-2 col-lg-offset-5'>
+          <div id='map-menu' class='map-content-holder'>
+          </div>
+        </div>
+
+        <div id='content-holder' class='row'>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p class="text-muted">Stable Seas is a project of <a target='_blank' href='http://oneearthfuture.org/'>One Earth Future</a>.
+          <span id='social'><a href='https://www.facebook.com/oneearthfuture/'><i class='fa fa-facebook'></i></a>&nbsp;&nbsp;<a href='https://twitter.com/oeforg'><i class='fa fa-twitter'></i></a>&nbsp;&nbsp;<a href='https://www.youtube.com/user/OEFResearch'><i class='fa fa-youtube'></i></a>&nbsp;
+            &nbsp;<a href='https://twitter.com/hashtag/StableSeas' target="_blank"><i class='fa fa-hashtag'></i></a></span> </p>
+
+
+        </div>
+
+      </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery.js"><\/script>')</script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/modal-video.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/d3-tile.js"></script>
+
+    <!-- <script src="./js/zoom.js"></script> -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>
