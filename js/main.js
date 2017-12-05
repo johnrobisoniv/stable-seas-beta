@@ -953,7 +953,7 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
                     return y  + 'px';})
                   .classed('hidden', false);
 
-                var idx = issueAreaData.overview.metadata.indexData
+                var idx = issueAreaData[issueArea].metadata.indexData
                   .filter(  function( obj ) {
                     return obj.iso3 == d.properties.ISO_A3_EH;
                   })[0];
