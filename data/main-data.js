@@ -24,6 +24,7 @@ var issueAreaData = { // ### replace data with something more descriptive. issue
       description: 'The index maps and measures global threats to maritime governance and analyzes challenges like piracy, smuggling, and capacity-building.'
     },
     load: function(csv, callback) {
+      var md = issueAreaData[issueArea].metadata;
       d3.csv(csv, function(vals) {
         vals.forEach(function(d) {
           d.ia1c0 = +d.ia1c0;
@@ -32,21 +33,17 @@ var issueAreaData = { // ### replace data with something more descriptive. issue
           d.ia1c3 = +d.ia1c3;
           d.ia1c4 = +d.ia1c4;
         });
-        issueAreaData[issueArea].metadata.countryData = vals;
+        md.countryData = vals;
         callback('overview load csv function callback');
       });
 
-      d3.csv('../../data/indexValues.csv', function(vals) {
+      d3.csv('../../data/' + md.path + '/indexValues.csv', function(vals) {
         vals.forEach(function(d) {
-          d.internationalCooperation = +d.internationalCooperation;
-          d.ruleOfLaw = +d.ruleOfLaw;
-          d.maritimeEnforcement = +d.maritimeEnforcement;
-          d.coastalWelfare = +d.coastalWelfare;
-          d.blueEconomy = +d.blueEconomy;
-          d.fisheries = +d.fisheries;
-          d.piracy = +d.piracy;
-          d.illicitTrades = +d.illicitTrades;
-          d.mixedMigration = +d.mixedMigration;
+          for (key in d) {
+            if (key != "country" && key != "iso3") {
+              d[key] = +d[key];
+            }
+          }
         });
         issueAreaData[issueArea].metadata.indexData = vals;
 
