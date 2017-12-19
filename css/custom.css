@@ -622,7 +622,7 @@ tr:nth-child(odd) {
 }
 .pulse.eez {
   stroke: #FC4C02;
-  /*stroke-width: 3px;*/
+  stroke-width: 3px;
 }
 tr.pulse {
   background-color: #FC4C02;

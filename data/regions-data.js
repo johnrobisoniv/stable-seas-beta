@@ -20,93 +20,93 @@ var regionsData = {
     },
     cards: [
       { // Card 0
-      title: 'Overview: The African Maritime Space',
-      menu: 'Regions Overview',
-      metadata: {
-        owner: '',
-        description: ''
-      },
-      map: {
-        scale: [],
-        translate: [],
-        extent: [
-          [],
-          []
-        ],
-      //  highlights: ['CPV', 'SEN', 'GNB', 'GMB', 'GIN', 'SLE', 'LBR'],
-        iso3: '',
-        load: function(index, csv) {
-          var layer = 'card-' + index + '-layer';
-          d3.select('.card-eez-layer')
-            .classed(layer, true);
+        title: 'Overview: The African Maritime Space',
+        menu: 'Regions Overview',
+        metadata: {
+          owner: '',
+          description: ''
         },
-        switch: function(index) {
-          // highlight each region with its color
-          var i = 0;
-          for (key in regionsData) {
-            var md = regionsData[key].metadata;
-            md.regionalCountries.forEach(function (iso) {
-              d3.selectAll('.country.' + iso)
-                .style('fill', function () {
-                  return d3.interpolateLab('white', regionsColor[md.index])(0.6);
-                })
-                .classed(key, true);
+        map: {
+          scale: [],
+          translate: [],
+          extent: [
+            [],
+            []
+          ],
+        //  highlights: ['CPV', 'SEN', 'GNB', 'GMB', 'GIN', 'SLE', 'LBR'],
+          iso3: '',
+          load: function(index, csv) {
+            var layer = 'card-' + index + '-layer';
+            d3.select('.card-eez-layer')
+              .classed(layer, true);
+          },
+          switch: function(index) {
+            // highlight each region with its color
+            var i = 0;
+            for (key in regionsData) {
+              var md = regionsData[key].metadata;
+              md.regionalCountries.forEach(function (iso) {
+                d3.selectAll('.country.' + iso)
+                  .style('fill', function () {
+                    return d3.interpolateLab('white', regionsColor[md.index])(0.6);
+                  })
+                  .classed(key, true);
 
-              d3.selectAll('.eez.'  + iso)
-                .style('stroke', regionsColor[md.index])
-                .classed(key, true);
+                d3.selectAll('.eez.'  + iso)
+                  .style('stroke', regionsColor[md.index])
+                  .classed(key, true);
 
 
-            });
-            i++;
+              });
+              i++;
+
+            }
 
           }
-
-        }
+        },
+        els: [{
+            tag: 'h1',
+            text: 'The African Continent'
+          },
+          {
+            tag: 'caption',
+            text: '<em>A subheading line on the continent\'s greatest strength</em>'
+          },
+          {
+            tag: 'p',
+            html: 'The first paragraph will introduce the country in the context of the region.'
+          },
+          {
+            tag: 'radar'
+          },
+          {
+            tag: 'video',
+            videoId: 'AXQHK213mFA',
+            thumb: '../../assets/overview/stable-seas-main-video-thumb.png'
+          },
+          {
+            tag: 'caption',
+            text: '<em>Do we want videos in this ? Well we can have them anyway ...</em>'
+          },
+          {
+            tag: 'h2',
+            html: 'Country 1\'s Strengths'
+          },
+          {
+            tag: 'p',
+            html: 'A paragraph on the country\'s strengths, and where it might serve as an example elsewhere in Africa.'
+          },
+          {
+            tag: 'h2',
+            html: 'Challenges Facing Country 1'
+          },
+          {
+            tag: 'p',
+            html: 'A paragraph on the nature of the subject country\'s weaknesses, and where it might learn some lessons on how to improve.'
+          }
+        ]
       },
-      els: [{
-          tag: 'h1',
-          text: 'The African Continent'
-        },
-        {
-          tag: 'caption',
-          text: '<em>A subheading line on the continent\'s greatest strength</em>'
-        },
-        {
-          tag: 'p',
-          html: 'The first paragraph will introduce the country in the context of the region.'
-        },
-        {
-          tag: 'radar'
-        },
-        {
-          tag: 'video',
-          videoId: 'AXQHK213mFA',
-          thumb: '../../assets/overview/stable-seas-main-video-thumb.png'
-        },
-        {
-          tag: 'caption',
-          text: '<em>Do we want videos in this ? Well we can have them anyway ...</em>'
-        },
-        {
-          tag: 'h2',
-          html: 'Country 1\'s Strengths'
-        },
-        {
-          tag: 'p',
-          html: 'A paragraph on the country\'s strengths, and where it might serve as an example elsewhere in Africa.'
-        },
-        {
-          tag: 'h2',
-          html: 'Challenges Facing Country 1'
-        },
-        {
-          tag: 'p',
-          html: 'A paragraph on the nature of the subject country\'s weaknesses, and where it might learn some lessons on how to improve.'
-        }
-      ]
-    },
-      { // Card 0
+      { // Card 1
       title: 'Region 1',
       menu: 'Region 1',
       metadata: {
@@ -197,7 +197,8 @@ var regionsData = {
     load: function(csv, callback) {
       callback('Western Coast load csv function callback');
     },
-    cards: [{ // Card 0
+    cards: [
+      { // Card 0
         title: 'Africa\'s Western Coast',
         menu: 'The Western Coast',
         metadata: {
@@ -237,6 +238,9 @@ var regionsData = {
               . This gives Cabo Verde the xth largest EEZ in sub-Saharan Africa. \
               Meanwhile, Cabo Verde\'s Maritime Enforcement Capacity Score indicates Cabo Verde is slightly above \
               the regional average.'
+          },
+          {
+            tag: 'radar'
           },
           {
             tag: 'p',
@@ -331,6 +335,14 @@ var regionsData = {
                 AND INTERESTING. COUNTRY can further improve upon this area of relative strength by SUGGESTION BACKED BY THE SUBSCORES.'
           },
           {
+            tag: 'h2',
+            html: 'Cabo Verde Index Sub-scores'
+          },
+          {
+            tag: 'img',
+            src: '../../assets/western-coast/radar-sample.png'
+          },
+          {
             tag: 'bigtext',
             html: 'COUNTRY is also above the regional average in LIST OF ALL ISSUES WHERE COUNTRY RANKS ABOVE 16.'
           },
@@ -339,37 +351,9 @@ var regionsData = {
             html: 'The greatest remaining challenge for COUNTRY is WORST ISSUE RANKING. COUNTRY scores SCORE in this area, and this is slightly/significantly above/below the regional average of regional average for this score. To further improve upon this score, COUNTRY can SUGGESTION BACKED BY THE SUBSCORES, FOCUSED ON DOMESTIC POLICY. Further progress can be made by SUGGESTION BACKED BY THE SUBSCORES, FOCUSED ON INTERNATIONAL/REGIONAL EFFORT. Through these efforts, COUNTRY can raise its weakest score and work toward comprehensive and lasting maritime security.'
           },
           {
-            tag: 'img',
-            src: '../../assets/western-coast/radar-sample.png'
-          },
-          {
-            tag: 'video',
-            videoId: 'AXQHK213mFA',
-            thumb: '../../assets/overview/stable-seas-main-video-thumb.png'
-          },
-          {
-            tag: 'caption',
-            text: '<em>Do we want videos in this ? Well we can have them anyway ...</em>'
-          },
-          {
-            tag: 'h2',
-            html: 'Country 1\'s Strengths'
-          },
-          {
             tag: 'p',
-            html: 'A paragraph on the country\'s strengths, and where it might serve as an example elsewhere in Africa.'
-          },
-          {
-            tag: 'h2',
-            html: 'Challenges Facing Country 1'
-          },
-          {
-            tag: 'p',
-            html: 'A paragraph on the nature of the subject country\'s weaknesses, and where it might learn some lessons on how to improve.'
+            html: 'Do we want to have links to methods cards here ?'
           }
-
-          // ...
-
         ]
       },
       { // Card 2

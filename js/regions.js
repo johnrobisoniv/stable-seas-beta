@@ -284,6 +284,15 @@ $('#content-holder').on('click', '.table-expand', function () {
       regionsMainNav.append('div')
         .classed('regions regions-buffer col-lg-1', true);
 
+      var regionIABtn = d3.select('#regions-' + region);
+
+      regionIABtn.style('background-color', function () {
+          return rampColor(0.6);
+        })
+        .style('border-bottom', function() {
+          return "5px solid " + regionsColorSelection;
+        });
+
       // Pull target card index from URL anchor:
       var hash = window.location.hash;
       if (hash) {
@@ -463,8 +472,11 @@ function buildEl (obj, container, cardIndex, elIndex) {  // Function to build el
       break;
     case 'd3' :
       break;
+    case 'radar':
+      buildRadar(obj, container, cardIndex, elIndex);
+      break;
     default:
-      console.log('One of the els objects did not match our switch statement in the buildEl() function.')
+      console.log('One of the els objects did not match our switch statement in the buildEl() function.', obj.tag)
   }
 }
 
@@ -836,6 +848,16 @@ function buildOverviewIndexTable ( obj, container, cardIndex, elIndex ) {
     .text('Expand to see more...');
 }
 
+function buildRadar ( obj, container, cardIndex, elIndex ) {
+  console.log(obj);
+  console.log(container);
+  console.log('card', cardIndex);
+  console.log('el', elIndex);
+
+
+
+}
+
 
 // Highlighting functions for table x map
 function pulse (iso3) {
@@ -849,7 +871,7 @@ function pulse (iso3) {
 }
 
 function pulseRegion (classed) {
-  console.log(classed);
+  //console.log(classed);
   var md = regionsData[classed].metadata;
   d3.selectAll('.country.' + classed)
     .style('fill', function () {
@@ -959,7 +981,7 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
           .attr('class', function (d) {
         //    if (d.properties.NAME == 'France') {console.log(d);}
             if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
-              return d.properties.ISO_A3_EH + ' country in';
+              return d.properties.ISO_A3_EH + ' country in stableseas';
             } else if (d.properties.ISO_A3_EH == 'ATA') {
               return d.properties.ISO_A3_EH + ' country out invisible';
 
@@ -981,10 +1003,15 @@ function buildMap (json) {  // ### Need some way to attach EEZ layer to specific
             //console.log(d);
             d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', false);
+            if ($.inArray(d.properties.ISO_A3_EH, includedCountries) != -1) {
+              pulse(d.properties.ISO_A3_EH);
+            }
           })
           .on('mouseout', function (d) {
             d3.select('.label.' + d.properties.ISO_A3_EH)
               .classed('invisible', true);
+            unpulse(d.properties.ISO_A3_EH);
+
           })
           .on('click', function (d) {
 

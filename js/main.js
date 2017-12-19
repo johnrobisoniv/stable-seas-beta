@@ -354,6 +354,15 @@ function loadIA(data, card) { // where data = data.js format ... so it's an obje
     iaMainNav.append('div')
       .classed('ia ia-buffer col-xs-1', true);
 
+    var iaBtn = d3.select('#ia-' + issueArea);
+
+    iaBtn.style('background-color', function () {
+        return rampColor(0.6);
+      })
+      .style('border-bottom', function() {
+        return "5px solid " + iaColorSelection;
+      });
+
     // Pull target card index from URL anchor:
     var hash = window.location.hash;
     if (hash) {
@@ -1388,7 +1397,7 @@ function closeNav() {
   document.getElementById("landing-screen").style.height = "0%";
 }
 
-d3.select('nav').on('mouseenter', function() {
+d3.select('#ia-main-nav').on('mouseenter', function() {
   var ia = d3.selectAll('.ia'),
     distanceY = window.pageYOffset || document.documentElement.scrollTop,
     shrinkOn = 30;

@@ -681,15 +681,17 @@ tr:nth-child(odd) {
   /*stroke-width: 1px*/
 }
 .pulse.eez {
-  stroke: #FC4C02;
+  stroke: white;
   /*stroke-width: 3px;*/
+  fill: white !important;
+  fill-opacity: 0.2 !important;
 }
 tr.pulse {
   background-color: #FC4C02;
 
 }
 .pulse.country {
-  fill: #FC4C02 !important;
+  fill: grey !important;
 }
 
 
